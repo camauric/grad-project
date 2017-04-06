@@ -1,0 +1,23 @@
+var qaData = [
+  {
+    "answer":"This answers the question about applying.",
+    "questions":["apply","application","i want to apply", "how to apply"]
+  }
+  ,
+  {
+    "answer":"This answers the question about gradution.",
+    "questions":["graduation","graduating","finished my program", "when do i graduate"]
+  }
+  ,
+  {
+    "answer":"This answers the question about counseling",
+    "questions":["counselor","counseling","i want to apply for counseling", "psychologist"]
+  }
+  ,
+  {
+    "answer":"This answers the question about applying for a job",
+    "questions":["applying for a job can neiu help","apply for a job","job assistance", "career center","help with job"]
+  }
+
+
+]
