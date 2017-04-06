@@ -78,7 +78,7 @@ var getFinalTokens = function(question){
   //remove stop words
   tokensNoStopWords = removeStopWords(currentTokens);
   //repalace stemwords
-  //tokensWordStemmer = stemWords(tokensNoStopWords);
+  tokensWordStemmer = stemWords(tokensNoStopWords);
 
   return tokensNoStopWords;
 }
