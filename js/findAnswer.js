@@ -2,219 +2,83 @@
 findAnswer.js
 author:Candace Maurice
 **/
+var findAnswer = function(tokens, matrix){
+	//console.log("here");
+	var inputArray = new Array(matrix[0].length).fill(0);
 
-$(document).ready(function(){
 
-	//searchstring value
-	var searchString = '';							//variable to hold search box value
+	//1.compare tokens to matrix first row of words to get 1s and 0s for input
+	$.each(tokens,function(i,token){
+		var indexOfMatch = matrix[0].indexOf(token)
+		if(indexOfMatch > -1){
+			inputArray[indexOfMatch] = 1;
+		};
 
-	//1. get question if enter button pressed
-	$('#srch_term').keydown(function(e){
-		
-		if(e.keyCode === 13){
-
-			$('#search_button').click();
-		}
 	});
 
-	//2. get question if search button clicked
-	$('#search_button').on('click', function(e){
-		
-		e.preventDefault();
-		
-		searchString = $.trim($('#srch_term').val()).toLowerCase();
-		
-		//check for empty string
-		if (searchString === ''){
+	//console.log(inputArray);
+	//2.add answer to the matrix (is this necessary?)
+	//3.find question with the highest sum of 1s
+	//traverse matrix to compare values with input string
+	var sum = 0; 			//sum of 1s in question row
+	var largest = 0; 	//value of highest sum of row
+	var answer = 0; 	//index of answer in qaData array aka i value
+	var previous = 0; 		//sum of previous row
+  var questionIndex = 1;
+	var answerText = '';
+	var answerFound = false;
+	var questionRowSum = [matrix[0].length]; //array for rowTotals;
 
-			alert("Please Enter a Question");
+	//console.log("input array : " + JSON.parse("[" + inputArray + "]"));
+	//traverse matrix array to find sum  of row totals
+	for(var i = 1; i < matrix.length; i++){
+		sum = 0;
+		for(var j = 0; j < matrix[i].length; j++){
+			if (matrix[i][j] === inputArray[j]){
+				sum += matrix[i][j];
 
-			$('#srch_term').focus();
+			}
 
-		}else{
-			//findAnswer(searchString);
 
-			question = new Question(searchString);
-
-			var tokensNoStopWords = question.removeStopWords();
-			
-			var wordStemmerTokens = question.stemWords(tokensNoStopWords);
-
-			//console.log(wordStemmerTokens);
-
-			question.findAnswer(wordStemmerTokens , question.findArraySize());
 		}
-		
-	});
+		if(sum >= largest){
+					questionIndex = i;
+					largest = sum;
+					answer = questionIndex;
 
-
-
-	/*******************************
-	*
-	* function Question
-	*
-	********************************/
-	
-
-	var Question = function(question){
-		
-		this.question = question;
-
-		tokens = this.question.split(" ");
-
-	};
-
-
-	Question.prototype.findArraySize = function(){
-
-		var numQuestions = 0;
-
-		for(var i = 0; i < qaData.length; ++i){
-			
-			$.each(qaData[i]['questions'], function(key, value) {
-				//console.log('KEY ==> ' + key );
-				
-					numQuestions++;
-				
-			});
 		}
-		
-		return numQuestions;
-	};
+		//console.log("current row sum outside of loop: " + sum);
+		questionRowSum[i-1] = sum ;
+	}
+	//if no answer found sum = 0 and largest 0
+	if(sum === 0 && largest === 0){
+		//console.log("NO ANSWER FOUND");
+		answerText = "answer not found";
+		answerFound = true;
+	}
+	//4. return corresponding answer via question index#
+	//if answer is an integer then an answer was found
+//console.log('answer value before loop : ' + answer);
+console.log("question row totals : " + JSON.parse("[" + questionRowSum + "]"));
+//var inputTotal = arraySum(inputArray);
 
+ if($.isNumeric(answer)){
 
-	Question.prototype.removeStopWords = function(question){
+  var questionTotalsArray = questionsInRow();
+  $.each(questionTotalsArray,function(i, value){
+ 	 //console.log('answer value : ' + answer + " value of i : " + i);
 
-		$.grep(tokens, function(token , i ){
+ 	  if(answer <= value && !answerFound){
+ 			answerText = qaData[i]['answer'];
+ 			answerFound = true;
+ 		}
+ 		else if(!answerFound && answer > value){
+ 			answer = answer - value;
 
-			$.each(stopwords, function(key, stopword){
-
-				//console.log(stopword + " current stop word. This is the current token. " + token);
-				
-				if(token == stopword){
-
-					var index = tokens.indexOf(stopword);
-
-					tokens.splice(index, 1);
-				}
-
-			});
-
-		});
-
-		return tokens;
-
-	};
-
-
-	Question.prototype.stemWords = function(tokensNoStopWords){
-
-		$.each(tokensNoStopWords, function(index, token){
-
-			console.log("Current Token " + token);
-
-			stemmedWord = stemmer(token);
-
-			console.log ("Current Stemmed Word " + stemmedWord);
-
-			tokensNoStopWords[index]  = stemmedWord;
-
-		});
-
-		return tokensNoStopWords;
-
-	};
-
-
-	Question.prototype.findAnswer = function(tokens_nsw, numQuestions){
-
-		console.log("TOKENS ==> " + tokens_nsw);
-		//array of question split into words
-		var counter = 0;
-
-		var total_array = Array.apply(null, Array(numQuestions)).map(Number.prototype.valueOf,0);
-
-		var largest = 0;
-
-		var temp = 0;
-
-		var answer = '';
-
-		var resetCounter = false;
-		
-		$.each(tokens_nsw, function(index, token){
-			
-			for(var i = 0; i < qaData.length; ++i)
-			{
-				
-				var total = 0;
-				var count = 0;
-					//largest = 0;
-				
-				//compare current token with each question
-			   $.each(qaData[i], function(key, value) { 
-			      if(key === 'questions'){
-
-				      	$.each(value,function(_,question){
-				      		//each token compare to question for similarity
-				      		if(resetCounter){counter = 0;}
-
-				      		//console.log("counter value '"+ token +"' : " + (counter + 1));
-
-			      			total = total_array[counter];
-
-			      			//console.log("total value '"+ token +"' : " + total_array[counter]);
-
-	      					count = (question.match(new RegExp(token, "gi"))||[]).length;
-		      			
-							total = total + count;
-
-							total_array[counter] = total;
-
-							//console.log("new total value '"+ token +"' : " + total_array[counter]);
-
-							//console.log(total_array[counter]);
-
-							//return answer of highest value
-							//console.log("largest ==> " + largest);
-							if(total >= largest){
-
-								largest = total;
-								//temp = 0;
-								answer = qaData[i]['answer'];
-							} 
-							//no answer found
-							if(total == 0 && largest == 0){
-
-								answer = "answer not found";
-							}
-
-							counter++;
-
-							resetCounter = false;
-
-	 				
-			      		});	
-		      		
-	      			}	      	
-			      		
-			      }); 
-			   	  
-				}resetCounter = true;
-		});
-
-		
-		//console.log(total_array.toString());
-		$('.main_body').html(answer);
-
-
-	};
-	
-	// Question.prototype.similarity = function(){
-
-	// };
-
-});
-
-
-
+ 		}
+  });
+  //console.log("answer : " + answer);
+  //answer = qaData[answer]['answer'];
+ }
+ return answerText;
+};

@@ -12,7 +12,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
         <style>
             body {
                 padding-top: 50px;
@@ -21,10 +21,10 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
-    <body ng-app="gradAssistant">
+    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -57,60 +57,24 @@
     <div class="jumbotron">
       <div class="container">
         <!--<h1>Ask, world!</h1>-->
+        <div class="input-group" ng-controller="InputController">
+        <form name="questionSearch" id="questionSearch" class="navbar-form-lg col-md-8 col-lg-10" role="search">
         <div class="input-group">
-        <form class="navbar-form-lg col-md-8 col-lg-10" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Ask a question" name="srch-term" id="srch_term">
+            <input type="text" class="form-control" value=""placeholder="Ask a question" name="srch_term"  id="srch_term" required>
             <div class="input-group-btn">
                 <button class="btn btn-default" id="search_button" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
+
         </div>
       </div>
         </form>
-        
+
         <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>-->
       </div>
     </div>
 
     <div class="container main_body">
-      <!-- Example row of columns -->
-      <!--<div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
 
-      <hr>-->
-     <!-- <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-      <hr>-->
 
     </div> <!-- /container -->
     <footer>
@@ -170,19 +134,27 @@
           </section>
 
         </div>
-      </div>  
+      </div>
       </footer>
       <div class="footer_copyright"></div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4/angular-sanitize.js></script>-->
+
         <script src="js/vendor/bootstrap.min.js"></script>
-        
-        <script src="js/main.js"></script>
+        <script src="js/vendor/purify.min.js"></script>
+        <script src="js/sharedfunctions.js"></script>
+        <script src="js/findAnswer.js"></script>
+        <script src="js/userInput.js"></script>
+        <script src="js/tokens.js"></script>
         <script src="js/stopwords.js"></script>
         <script src="js/wordstemmer.js"></script>
         <script src="js/qs_and_as.json"></script>
-        <script src="js/findAnswer.js"></script>
+        <script src="js/buildMatrix.js"></script>
+        <script src="js/app.js"></script>
+
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
