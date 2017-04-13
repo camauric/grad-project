@@ -3,7 +3,7 @@ findAnswer.js
 author:Candace Maurice
 **/
 var findAnswer = function(tokens, matrix){
-	//console.log("here");
+
 	var inputArray = new Array(matrix[0].length).fill(0);
 
 
@@ -18,16 +18,17 @@ var findAnswer = function(tokens, matrix){
 
 	//console.log(inputArray);
 	//2.add answer to the matrix (is this necessary?)
+
 	//3.find question with the highest sum of 1s
 	//traverse matrix to compare values with input string
-	var sum = 0; 			//sum of 1s in question row
-	var largest = 0; 	//value of highest sum of row
-	var answer = 0; 	//index of answer in qaData array aka i value
-	var previous = 0; 		//sum of previous row
-  var questionIndex = 1;
-	var answerText = '';
-	var answerFound = false;
-	var questionRowSum = [matrix[0].length]; //array for rowTotals;
+	var sum = 0; 																	//sum of 1s in question row
+	var largest = 0; 															//value of highest sum of row
+	var answer = 0; 															//index of answer in qaData array aka i value
+	var previous = 0; 														//sum of previous row
+  //var questionIndex = 1;
+	var answerText = '';													//answer that gets returned
+	var answerFound = false;											//answer foudn flag
+	var questionRowSum = [matrix[0].length]; 			//array for rowTotals;
 
 	//console.log("input array : " + JSON.parse("[" + inputArray + "]"));
 	//traverse matrix array to find sum  of row totals
@@ -38,14 +39,11 @@ var findAnswer = function(tokens, matrix){
 				sum += matrix[i][j];
 
 			}
-
-
 		}
+		//store largest total as
 		if(sum >= largest){
-					questionIndex = i;
+					answer = i;
 					largest = sum;
-					answer = questionIndex;
-
 		}
 		//console.log("current row sum outside of loop: " + sum);
 		questionRowSum[i-1] = sum ;
@@ -65,6 +63,7 @@ console.log("question row totals : " + JSON.parse("[" + questionRowSum + "]"));
  if($.isNumeric(answer)){
 
   var questionTotalsArray = questionsInRow();
+
   $.each(questionTotalsArray,function(i, value){
  	 //console.log('answer value : ' + answer + " value of i : " + i);
 

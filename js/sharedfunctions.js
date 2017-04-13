@@ -69,16 +69,24 @@ var cleanCode = function(input){
 
 };
 
+var removePunctuation = function(inputString){
+   console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
+   return inputString.replace(/[^a-z0-9\s]/gi, '');
+
+};
+
 //get tokens that have been run through all preprocessors
 var getFinalTokens = function(question){
   //get tokens for current question
   question = $.trim(question);
+  //remove punctuation and specila characters
+  question = removePunctuation(question);
   //split into array of tokens
   currentTokens = getTokens(question);
   //remove stop words
   tokensNoStopWords = removeStopWords(currentTokens);
   //repalace stemwords
-  tokensWordStemmer = stemWords(tokensNoStopWords);
+  //tokensWordStemmer = stemWords(tokensNoStopWords);
 
   return tokensNoStopWords;
 }
