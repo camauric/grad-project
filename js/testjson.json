@@ -1,5 +1,30 @@
 var qaData = [
   {
+    "answer":"This answers the question about applying.",
+    "questions":["apply","application","i want to apply", "how to apply"]
+  }
+  ,
+  {
+    "answer":"This answers the question about graduation.",
+    "questions":["graduation","graduating","finished my program", "when do i graduate"]
+  }
+  ,
+  {
+    "answer":"This answers the question about counseling",
+    "questions":["counselor","counseling","i want to apply for counseling", "psychologist"]
+  }
+  ,
+  {
+    "answer":"This answers the question about applying for a job",
+    "questions":["applying for a job can neiu help","apply for a job","job assistance", "career center","help with job"]
+  }
+
+
+]
+
+
+var qaData = [
+  {
    "answer":" <h3>I have been admitted to a Northeastern Illinois University graduate program. Now what?<\/h3><ul> <li> <strong> Meet with your graduate advisor/program coordinator<\/strong>. Graduate advisors and program&nbsp;coordinators handle your&nbsp;admission to the program and graduation applications, advise you on your program of study, inform you of departmental regulations and procedures, monitor your academic progress, provide guidance regarding Graduate Studies policies and procedures, and can nominate you&nbsp;for merit tuition scholarships.<\/li> <li><strong>Investigate financial support options<\/strong>. Financial Aid, Graduate Assistantships, and Graduate Merit Tuition Award Scholarship are all options. If you are an underrepresented minority from Illinois, and you are interested in someday working in higher education, you may be eligible for the Diversifying Higher Education Faculty in Illinois (DFI) Program.&nbsp;<\/li> <li><strong>Register for classes.<\/strong> Be sure to note all <a href=\"http://neiu.edu/academics/registrar-services/class-schedules-and-registration\">registration guidelines and deadlines.<\/a><\/li><\/ul>",
    "questions":["i have been admitted to a northeastern illinois university graduate program now what","registration","how do i register for classes"]
   }

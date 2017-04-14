@@ -2,19 +2,19 @@
 findAnswer.js
 author:Candace Maurice
 **/
-var findAnswer = function(tokens, matrix){
+var findAnswer = function(inputArray, matrix){
 
-	var inputArray = new Array(matrix[0].length).fill(0);
-
-
-	//1.compare tokens to matrix first row of words to get 1s and 0s for input
-	$.each(tokens,function(i,token){
-		var indexOfMatch = matrix[0].indexOf(token)
-		if(indexOfMatch > -1){
-			inputArray[indexOfMatch] = 1;
-		};
-
-	});
+	// var inputArray = fillArray(matrix[0].length);
+	//
+	//
+	// //1.compare tokens to matrix first row of words to get 1s and 0s for input
+	// $.each(tokens,function(i,token){
+	// 	var indexOfMatch = matrix[0].indexOf(token)
+	// 	if(indexOfMatch > -1){
+	// 		inputArray[indexOfMatch] = 1;
+	// 	};
+	//
+	// });
 
 	//console.log(inputArray);
 	//2.add answer to the matrix (is this necessary?)
@@ -54,30 +54,34 @@ var findAnswer = function(tokens, matrix){
 		answerText = "answer not found";
 		answerFound = true;
 	}
+	//output question row totals in console
+	console.log("question row totals : " + JSON.parse("[" + questionRowSum + "]"));
+
 	//4. return corresponding answer via question index#
 	//if answer is an integer then an answer was found
-//console.log('answer value before loop : ' + answer);
-console.log("question row totals : " + JSON.parse("[" + questionRowSum + "]"));
-//var inputTotal = arraySum(inputArray);
-
  if($.isNumeric(answer)){
 
+	//get number of questions in row in for answer
   var questionTotalsArray = questionsInRow();
 
   $.each(questionTotalsArray,function(i, value){
  	 //console.log('answer value : ' + answer + " value of i : " + i);
-
+	 	//if index of answer is less than or equal to the number
+		//of questions in the row then the answer is in that row
+		//set answer found to true
  	  if(answer <= value && !answerFound){
  			answerText = qaData[i]['answer'];
  			answerFound = true;
+			//break;
  		}
+		//else subtract the row total from answer an keep comparing
  		else if(!answerFound && answer > value){
  			answer = answer - value;
 
  		}
   });
-  //console.log("answer : " + answer);
-  //answer = qaData[answer]['answer'];
+
  }
- return answerText;
+
+ return [answerText, questionRowSum];
 };

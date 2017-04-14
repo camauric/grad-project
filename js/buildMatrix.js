@@ -46,7 +46,7 @@ var buildMatrix = function(){
 
   //intialize array with row for each questions with 0s for all tokens
   while(numberOfQuestions > 0){
-   matrix.push(new Array(numTokens).fill(0));
+   matrix.push(fillArray(numTokens));
    numberOfQuestions--;
   }
 
@@ -62,7 +62,7 @@ var buildMatrix = function(){
         //tokens for current question
         tokens = getFinalTokens(question);
 
-        console.log("tokens for current question" + tokens);
+        //console.log("tokens for current question" + tokens);
 
       $.each(tokens, function(k, token){
          var indexOfMatch = matrix[0].indexOf(token)

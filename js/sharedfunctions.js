@@ -1,6 +1,6 @@
 //remove stopwords function uses stopword
 var removeStopWords = function(tokens){
-
+console.log("TOKENS BEFORE STOP WORDS" + tokens);
   $.grep(tokens, function(token , i ){
 
     $.each(stopwords, function(key, stopword){
@@ -17,7 +17,7 @@ var removeStopWords = function(tokens){
     });
 
   });
-
+  console.log("TOKENS AFTER STOP WORDS" + tokens);
   return tokens;
 
 };
@@ -30,7 +30,7 @@ var stemWords = function(tokensNoStopWords){
 
     stemmedWord = stemmer(token);
 
-    console.log ("Current Stemmed Word " + stemmedWord);
+    //console.log ("Current Stemmed Word " + stemmedWord);
 
     tokensNoStopWords[index]  = stemmedWord;
 
@@ -86,9 +86,24 @@ var getFinalTokens = function(question){
   //remove stop words
   tokensNoStopWords = removeStopWords(currentTokens);
   //repalace stemwords
-  //tokensWordStemmer = stemWords(tokensNoStopWords);
+  tokensWordStemmer = stemWords(tokensNoStopWords);
 
-  return tokensNoStopWords;
+  return tokensWordStemmer;
+}
+
+var getFinalTokensWithStopWords = function(question){
+  //get tokens for current question
+  question = $.trim(question);
+  //remove punctuation and specila characters
+  question = removePunctuation(question);
+  //split into array of tokens
+  currentTokens = getTokens(question);
+  //remove stop words
+  //tokensNoStopWords = removeStopWords(currentTokens);
+  //repalace stemwords
+  tokensWordStemmer = stemWords(currentTokens);
+
+  return tokensWordStemmer;
 }
 //print matrix to console
 var logMatrix = function(matrix){
@@ -120,4 +135,29 @@ var arraySum = function(inputArray){
   for(var i in inputArray) { total += inputArray[i]; }
   return total;
 
+};
+
+var getMax = function(inputArray){
+
+   return Math.max.apply(Math, inputArray);
+};
+
+var fillArray = function(size){
+
+  return new Array(size).fill(0);
+
+};
+
+var buildQuestionsArray = function(){
+  var questionsArray = [];
+  for(var i = 0; i < qaData.length; ++i){
+
+    $.each(qaData[i]['questions'], function(key, value) {
+      //console.log('KEY ==> ' + key );
+
+        questionsArray.push(value);
+
+    });
+  }
+  return questionsArray;
 };

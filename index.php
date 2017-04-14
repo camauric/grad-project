@@ -152,6 +152,8 @@
         <script src="js/wordstemmer.js"></script>
         <script src="js/qs_and_as.json"></script>
         <script src="js/buildMatrix.js"></script>
+        <script src="js/compareTokens.js"></script>
+        <script src="js/topthreequestion.js"></script>
         <script src="js/app.js"></script>
 
 
