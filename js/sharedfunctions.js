@@ -1,6 +1,6 @@
 //remove stopwords function uses stopword
 var removeStopWords = function(tokens){
-console.log("TOKENS BEFORE STOP WORDS" + tokens);
+//console.log("TOKENS BEFORE STOP WORDS" + tokens);
   $.grep(tokens, function(token , i ){
 
     $.each(stopwords, function(key, stopword){
@@ -17,7 +17,7 @@ console.log("TOKENS BEFORE STOP WORDS" + tokens);
     });
 
   });
-  console.log("TOKENS AFTER STOP WORDS" + tokens);
+  //console.log("TOKENS AFTER STOP WORDS" + tokens);
   return tokens;
 
 };
@@ -70,7 +70,7 @@ var cleanCode = function(input){
 };
 
 var removePunctuation = function(inputString){
-   console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
+   //console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
    return inputString.replace(/[^a-z0-9\s]/gi, '');
 
 };

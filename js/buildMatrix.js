@@ -22,7 +22,7 @@ var buildMatrix = function(){
 
         tokens = getFinalTokens(question);
 
-        //push tokens onto array and count number of tokens for use later
+        //push tokens onto array
         for(var k in tokens){
 
           allTokens.push(tokens[k]);
