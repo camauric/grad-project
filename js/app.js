@@ -37,8 +37,19 @@ $(document).ready(function(){
       //tokenize search string
       var tokens = getFinalTokens(searchString);
 
+			//compare input to matrix
+			var inputArray = compareTokens(tokens,matrix);
+
       //run through the matix, find the answer
-      var answer = findAnswer(tokens,matrix);
+      var returnedValues = findAnswer(inputArray,matrix);
+
+			var answer = returnedValues[0];
+
+			var questionsTotals = returnedValues[1];
+
+			var questionsArray = buildQuestionsArray();
+
+			var topThree = topThreeQuestions(searchString,questionsTotals,questionsArray);
       //display the answer
       $('.main_body').html(answer);
 
