@@ -24,21 +24,7 @@ var topThreeQuestions = function(inputString, questionsTotals, questionsArray){
     //console.log("TOP THREE ARRAY" + topThree);
   }
 
-  //ouput to console
-  var output = 'USER : ' + inputString;
-  output += "\n USER PROCESSED without Stopwords : " + getFinalTokens(inputString);
-  output += "\n USER PROCESSES with stopwords : " + getFinalTokensWithStopWords(inputString);;
-  $.each(topThree, function(i,value){
-    if(value[1] !== ''){
-
-       output += "\n Q" + (i+1) + ": " + value[1] + " : " + value[0];
-
-    }
-
-  });
-
-  console.log(output);
-
+ logTopThree(inputString,topThree);
  return topThree;
 
 };

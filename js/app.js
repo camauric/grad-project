@@ -40,7 +40,7 @@ $(document).ready(function(){
 			//compare input to matrix
 			var inputArray = compareTokens(tokens,matrix);
 
-      //run through the matix, find the answer
+      //run through the matrix, find the answer
       var returnedValues = findAnswer(inputArray,matrix);
 
 			var answer = returnedValues[0];
