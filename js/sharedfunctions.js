@@ -1,47 +1,9 @@
-//returns array of tokens after removal of stopwords
-var removeStopWords = function(tokens){
-//console.log("TOKENS BEFORE STOP WORDS" + tokens);
-  $.grep(tokens, function(token , i ){
 
-    $.each(stopwords, function(key, stopword){
 
-      //console.log(stopword + " current stop word. This is the current token. " + token);
-
-      if(token === stopword){
-
-        var index = tokens.indexOf(stopword);
-
-        tokens.splice(index, 1);
-      }
-
-    });
-
-  });
-  //console.log("TOKENS AFTER STOP WORDS" + tokens);
-  return tokens;
-
-};
-
-//returns array of tokens that are run through word stemmer
-var stemWords = function(tokensNoStopWords){
-
-  $.each(tokensNoStopWords, function(index, token){
-
-    //console.log("Current Token " + token);
-
-    stemmedWord = stemmer(token);
-
-    //console.log ("Current Stemmed Word " + stemmedWord);
-
-    tokensNoStopWords[index]  = stemmedWord;
-
-  });
-
-  return tokensNoStopWords;
-
-};
-
-//returns total number of questions in qaData
+/**
+ * returns total number of questions in qaData
+ * @return {[integer]} [number of total question in data file qs_and_as.json]
+ */
 var getNumQuestions = function(){
 
   var numQuestions = 0;
@@ -59,63 +21,25 @@ var getNumQuestions = function(){
   return numQuestions;
 };
 
-//split string into tokens with a space as the parser
-var getTokens = function(inputString){
-  return inputString.split(' ');
 
-};
 
-//removes punctuation from inputString
+/**
+ * removes punctuation from inputString
+ * @param  {[string]} inputString [a string]
+ * @return {[string]}             [string without punctuation or special chareacters, only alphanumeric characters]
+ */
 var removePunctuation = function(inputString){
    //console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
    return inputString.replace(/[^a-z0-9\s]/gi, '');
 
 };
 
-//get tokens that have been run through all preprocessors
-//input: string
-//removes spaces before and after string
-//removes punctuation from string
-//splits string into tokens in an array
-//removes stopwords from tokens array
-//runs tokens through wordstemmer
-//returns array of stemmed tokens
-var getFinalTokens = function(question){
-  //get tokens for current question
-  question = $.trim(question);
-  //remove punctuation and specila characters
-  question = removePunctuation(question);
-  //split into array of tokens
-  currentTokens = getTokens(question);
-  //remove stop words
-  tokensNoStopWords = removeStopWords(currentTokens);
-  //repalace stemwords
-  tokensWordStemmer = stemWords(tokensNoStopWords);
 
-  return tokensWordStemmer;
-}
-
-//input: string
-//removes spaces before and after string
-//removes punctuation from string
-//splits string into tokens
-//runs tokens through wordstemmer
-//returns array of stemmed tokens
-var getFinalTokensWithStopWords = function(question){
-  //get tokens for current question
-  question = $.trim(question);
-  //remove punctuation and specila characters
-  question = removePunctuation(question);
-  //split into array of tokens
-  currentTokens = getTokens(question);
-  //remove stop words
-  //tokensNoStopWords = removeStopWords(currentTokens);
-  //repalace stemwords
-  tokensWordStemmer = stemWords(currentTokens);
-
-  return tokensWordStemmer;
-}
-//print matrix to console
+/**
+ * print matrix to console for developemnt purposes
+ * @param  {[two dimensional array]} matrix [description]
+ *
+ */
 var logMatrix = function(matrix){
   console.log("MATRIX : ")
   arrText = ' ';
@@ -129,7 +53,10 @@ var logMatrix = function(matrix){
 
 };
 
-//returns an array with the amount of question for each answer in the data array
+/**
+ * returns an array with the amount of question for each answer in the data array
+ * @return {[array]} [array of integers of the number of questions for each answer]
+ */
 var questionsInRow = function(){
   var questionRowTotals = [];
   for(var i = 0; i < qaData.length; i++){
@@ -142,27 +69,44 @@ var questionsInRow = function(){
 
 };
 
-//sums the values in an array
+/**
+ * sums the values in an array
+ * @param  {[array]}    inputArray  [array of values]
+ * @return {[integer]}  total       [sum of array values]
+ */
 var arraySum = function(inputArray){
+  var total = 0;
   for(var i in inputArray) { total += inputArray[i]; }
   return total;
 
 };
 
-//takes in an array and returns the highes value
+/**
+ * takes in an array and returns the highes value
+ * @param  {[array]} inputArray   [array of values]
+ * @return {[integer]}            [maximum value in array]
+ */
 var getMax = function(inputArray){
 
    return Math.max.apply(Math, inputArray);
 };
 
-//fill array of a set size with 0s
+
+/**
+ * fill array of a set size with 0s
+ * @param  {[integer]} size   [size of array to be filled]
+ * @return {[array]}          [array of size initialized with 0s]
+ */
 var fillArray = function(size){
 
   return new Array(size).fill(0);
 
 };
 
-//returns array of all questions
+/**
+ * returns array of all questions
+ * @return {[array]} questionsArray [array of all questions in qs_and_as.js]
+ */
 var buildQuestionsArray = function(){
   var questionsArray = [];
   for(var i = 0; i < qaData.length; ++i){
@@ -177,19 +121,4 @@ var buildQuestionsArray = function(){
   return questionsArray;
 };
 
-//ouput topthree to console
-var logTopThree = function(inputString, topThree){
-  //ouput to console
-  var output = 'USER : ' + inputString;
-  output += "\n USER PROCESSED without Stopwords : " + getFinalTokens(inputString);
-  output += "\n USER PROCESSES with stopwords : " + getFinalTokensWithStopWords(inputString);;
-  $.each(topThree, function(i,value){
-    if(value[1] !== ''){
 
-       output += "\n Q" + (i+1) + ": " + value[1] + " : " + value[0];
-
-    }
-
-  });
-  console.log(output);
-};

@@ -7,7 +7,8 @@ $(document).ready(function(){
   //2.get search string (user question)
 
   //searchstring variable
-	var searchString = '';
+	var searchString = answer =  '';
+
 
 	//1. get question if enter button pressed
 	$('#srch_term').keydown(function(e){
@@ -34,24 +35,42 @@ $(document).ready(function(){
 
 		}else{
 
-      //tokenize search string
-      var tokens = getFinalTokens(searchString);
+      	//tokenize search string
+      	var tokens = getFinalTokens(searchString);
+	 	//compare input to matrix
+		var inputArray = compareTokens(tokens,matrix);
 
-			//compare input to matrix
-			var inputArray = compareTokens(tokens,matrix);
+		//check if inputArray has any matches
+		var inputArraySum = arraySum(inputArray);
 
-      //run through the matrix, find the answer
-      var returnedValues = findAnswer(inputArray,matrix);
-
-			var answer = returnedValues[0];
-
-			var questionsTotals = returnedValues[1];
+		if(inputArraySum > 0){
+			var cosineTotalsArray = getCosineTotals(inputArray, matrix);
 
 			var questionsArray = buildQuestionsArray();
 
-			var topThree = topThreeQuestions(searchString,questionsTotals,questionsArray);
-      //display the answer
-      $('.main_body').html(answer);
+			var topThree = getTopThreeQuestions(cosineTotalsArray, questionsArray);
+
+			logTopThree(searchString,topThree);
+
+			answer = findAnswer(topThree);
+
+		}else{
+			answer = "<h3> Answer not found! Please try again!</h3>";
+		}
+
+
+      	//run through the matrix, find the answer
+      	//var returnedValues = findAnswer(inputArray,matrix);
+
+		//var answer = returnedValues[0];
+
+		//var questionsTotals = returnedValues[1];
+
+		//
+
+		//var topThree = topThreeQuestions(searchString,questionsTotals,questionsArray);
+        //display the answer
+        $('.main_body').html(answer);
 
 		}
 
