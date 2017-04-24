@@ -72,7 +72,7 @@ var qaData = [
   ,
   {
     "answer":"<h3><a>Child Care<\/a><\/h3><p><a href=\"/university-life/child-care-center\">Northeastern's Child Care Center</a> is located on campus just north of the Foster Avenue entrance and provides for the care of children age fifteen months through kindergarten. It operates Monday through Friday from 7 a.m. to 6 p.m. Half and full-day sessions are available. The Center is licensed by the State of Illinois Department of Children and Family Services. Contact the Center at ext. 4540.<\/p>",
-    "questions":["child care","child care on campus","child care center", "children", "daycare"]
+    "questions":["child care","child care on campus","child care center", "children", "daycare", "i have kids", "care for my kids"]
   }
   ,
   {
@@ -204,5 +204,4 @@ var qaData = [
     "answer": "<h3>Email and Phone Numbers<\/h3><table><tr><td>Graduate Admissions<\/td><td><a href=\"tel:7734426001\">(773) 442-6001<\/a><\/td><td><\/td><\/tr><tr><td>Financial Aid<\/td><td><a href=\"tel:7734425016\">(773) 442-5016<\/a><\/td><td><a href=\"mailto:financial-aid@neiu.edu\">financial-aid@neiu.edu<\/a><\/td><\/tr><tr><td>Graduate Student Services<\/td><td><a href=\"tel:7734426012\">(773) 442-6012<\/a><\/td><td><a href=\"mailto:graduatestudies@neiu.edu\">graduatestudies@neiu.edu<\/a><\/td><\/tr><tr><td>Computer Science Department<\/td><td><a href=\"tel:7734424720\">(773) 442-4720<\/a><\/td><td><a href=\"mailto:n-jeun@neiu.edu\">n-jeun@neiu.edu<\/a><\/td><\/tr><\/table>",
     "questions":["graduate admissions phone number", "contact graduate admissions", "contact financial aid", "graduate admissions email", "financial aid phone number", "fincacial aid email", "graduate student services contact", "graduate student services phone number", "graduate student services email", "computer science department contact", "computer science department phone number", "computer science department email", "cs phone mumber", "cs department contact", "cs department phone", "cs department email"]
   }
-  
 ]

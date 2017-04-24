@@ -1,3 +1,9 @@
+/**
+ * compare tokens in array to matrix and
+ * @param  {[array]} 					tokens 		[array integers 0s and 1s for vector of matched words]
+ * @param  {[two-dimensional array]} 	matrix 		[two dimensional array each row represents a question with 0s and 1s for matched words]
+ * @return {[array]}  					inputArray  [array of integers with 1s for matched terms]
+ */
 var compareTokens = function(tokens, matrix){
   var inputArray = fillArray(matrix[0].length);
 
@@ -10,5 +16,6 @@ var compareTokens = function(tokens, matrix){
 		};
 
 	});
+
   return inputArray;
 };
