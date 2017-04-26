@@ -2,11 +2,11 @@ var getTopThreeQuestions = function(consineTotalsArray, questionsArray){
   var tempArray = consineTotalsArray;
   var topThree = [];
 
-  //console.log("COSINE TOTALS ARRAY: " + consineTotalsArray);
+  console.log("COSINE TOTALS ARRAY: " + consineTotalsArray);
   for(var i = 1; i < 4; i++){
     var max = getMax(tempArray);
     //console.log("MAX : " + max);
-    if(max > 0){
+    if(max !== 0){
       questionIndex = tempArray.indexOf(max);
       //console.log("questionIndex : " + questionIndex);
       tempArray.splice(questionIndex, 1);
@@ -15,9 +15,9 @@ var getTopThreeQuestions = function(consineTotalsArray, questionsArray){
       question = questionsArray[questionIndex];
 
     }
-    else{
-      question = '';
-    }
+    // else{
+    //   question = '';
+    // }
 
 
     topThree.push([max, question, questionIndex]);

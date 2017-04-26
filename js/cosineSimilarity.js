@@ -6,8 +6,8 @@
 
 var cosineSimilarity = function(inputArray, currentQuestionArray){
 
-	console.log( "INPUT ARRAY :  " + inputArray);
-	console.log("currentQuestionArray : " + currentQuestionArray);
+	//console.log( "INPUT ARRAY :  " + inputArray);
+	//console.log("currentQuestionArray : " + currentQuestionArray);
 
 	var numerator = getNumerator(inputArray, currentQuestionArray);
 	var denominator = getDenominator(inputArray, currentQuestionArray);
@@ -21,18 +21,18 @@ var getNumerator = function(inputArray, currentQuestionArray){
 
 	var sum = 0;
 
-	for(var i =0; i < inputArray.length; i++){
+	for(var i = 0; i < inputArray.length; i++){
 
 		sum += inputArray[i] * currentQuestionArray[i];
 
 	}
-	console.log("NUMERATOR SUM : " + sum);
+	//console.log("NUMERATOR SUM : " + sum);
 	return sum;
 };
 
 var getDenominator = function(inputArray, currentQuestionArray){
-	console.log( "INPUT ARRAY :  " + inputArray);
-	console.log("currentQuestionArray : " + currentQuestionArray);
+	//console.log( "INPUT ARRAY :  " + inputArray);
+	//console.log("currentQuestionArray : " + currentQuestionArray);
 
 	var sumA = sumB = answer = 0;
 
@@ -42,7 +42,7 @@ var getDenominator = function(inputArray, currentQuestionArray){
 		sumB += currentQuestionArray[i] * currentQuestionArray[i];
 
 	}
-	console.log("SUM A = " + sumA + " SUM B = " + sumB);
+	//console.log("SUM A = " + sumA + " SUM B = " + sumB);
 	answer = Math.sqrt(sumA) * Math.sqrt(sumB);
 
 
