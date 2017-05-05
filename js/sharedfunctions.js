@@ -61,7 +61,7 @@ var questionsInRow = function(){
   var questionRowTotals = [];
   for(var i = 0; i < qaData.length; i++){
 
-    questionRowTotals.push(qaData[i]['questions'].length);
+    questionRowTotals.push([qaData[i]['questions'].length, i]);
 
   }
   //console.log("array of question row totals : " + questionRowTotals);
@@ -114,10 +114,11 @@ var buildQuestionsArray = function(){
     $.each(qaData[i]['questions'], function(key, value) {
       //console.log('KEY ==> ' + key );
 
-        questionsArray.push(value);
+        questionsArray.push([value, i]);
 
     });
   }
+   //console.log("Questions Array : " + questionsArray)
   return questionsArray;
 };
 

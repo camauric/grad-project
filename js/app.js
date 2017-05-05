@@ -2,6 +2,8 @@ $(document).ready(function(){
 
 	//1.build intial matrix
 	var matrix = buildMatrix();
+	//build array of all questions with corresponding answer index
+	var questionAnswerArray = buildQuestionsArray();
 	//console.log(matrix);
 
   //2.get search string (user question)
@@ -52,7 +54,7 @@ $(document).ready(function(){
 
 			logTopThree(searchString,topThree);
 
-			answer = findAnswer(topThree);
+			answer = findAnswer(topThree, questionAnswerArray);
 
 		}else{
 			answer = "<h3> Answer not found! Please try again!</h3>";
