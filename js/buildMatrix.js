@@ -32,17 +32,17 @@ var buildMatrix = function(){
     });
   }
   //unique values as tokens
-  var uniqueTokens = allTokens.filter(function(elem, pos) {
-    return allTokens.indexOf(elem) == pos;
-  });
-  numTokens = Object.keys(uniqueTokens).length;
+  //var uniqueTokens = allTokens.filter(function(elem, pos) {
+  //  return allTokens.indexOf(elem) == pos;
+  //});
+  numTokens = Object.keys(allTokens).length;
   //console.log("UNIQUE TOKENS ++++++>>>>>" + numTokens);
   //console.log(uniqueTokens);
   var numberOfQuestions = getNumQuestions();
   //console.log("Number of Tokens : " + numTokens);
   var matrix = [];
   //push array of tokens on to matrix
-  matrix.push(uniqueTokens);
+  matrix.push(allTokens);
 
   //intialize array with row for each questions with 0s for all tokens
   while(numberOfQuestions > 0){
@@ -75,7 +75,7 @@ var buildMatrix = function(){
     });
 
   }
-  logMatrix(matrix);
+  //logMatrix(matrix);
 
 return(matrix);
 

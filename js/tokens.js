@@ -90,11 +90,11 @@ var getFinalTokens = function(question){
   //split into array of tokens
   currentTokens = getTokens(question);
   //remove stop words
-  tokensNoStopWords = removeStopWords(currentTokens);
+  tokens = removeStopWords(currentTokens);
   //repalace stemwords
-  tokensWordStemmer = stemWords(tokensNoStopWords);
+  //tokensWordStemmer = stemWords(tokensNoStopWords);
 
-  return tokensWordStemmer;
+  return tokens;
 }
 
 /**
@@ -121,5 +121,3 @@ var getFinalTokensWithStopWords = function(question){
 
   return tokensWordStemmer;
 }
-
-
