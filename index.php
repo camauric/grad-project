@@ -146,16 +146,14 @@
         <script src="js/vendor/purify.min.js"></script>
         <script src="js/sharedfunctions.js"></script>
         <script src="js/findAnswer.js"></script>
-        <!--<script src="js/userInput.js"></script>-->
-        <script src ="js/cosineSimilarity.js"></script>
+        <script src="js/userInput.js"></script>
         <script src="js/tokens.js"></script>
         <script src="js/stopwords.js"></script>
         <script src="js/wordstemmer.js"></script>
         <script src="js/qs_and_as.json"></script>
         <script src="js/buildMatrix.js"></script>
         <script src="js/compareTokens.js"></script>
-        <script src="js/topthreequestions.js"></script>
-        <script src="js/sumRowTotals.js"></script>
+        <script src="js/topthreequestion.js"></script>
         <script src="js/app.js"></script>
 
 

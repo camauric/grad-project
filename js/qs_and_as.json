@@ -2,7 +2,7 @@
 var qaData = [
   {
    "answer":" <h3>I have been admitted to a Northeastern Illinois University graduate program. Now what?<\/h3><ul> <li> <strong> Meet with your graduate advisor/program coordinator<\/strong>. Graduate advisors and program&nbsp;coordinators handle your&nbsp;admission to the program and graduation applications, advise you on your program of study, inform you of departmental regulations and procedures, monitor your academic progress, provide guidance regarding Graduate Studies policies and procedures, and can nominate you&nbsp;for merit tuition scholarships.<\/li> <li><strong>Investigate financial support options<\/strong>. Financial Aid, Graduate Assistantships, and Graduate Merit Tuition Award Scholarship are all options. If you are an underrepresented minority from Illinois, and you are interested in someday working in higher education, you may be eligible for the Diversifying Higher Education Faculty in Illinois (DFI) Program.&nbsp;<\/li> <li><strong>Register for classes.<\/strong> Be sure to note all <a href=\"http://neiu.edu/academics/registrar-services/class-schedules-and-registration\">registration guidelines and deadlines.<\/a><\/li><\/ul>",
-   "questions":["i have been admitted to a northeastern illinois university graduate program now what","registration","how do i register for classes", "next step", "admitted to program"]
+   "questions":["i have been admitted to a northeastern illinois university graduate program now what","registration","how do i register for classes"]
   }
     ,
   {
@@ -27,7 +27,7 @@ var qaData = [
   ,
   {
     "answer":"<h3>Can I take a leave of absence?<\/h3><p>A student in good academic standing may be given a leave of absence upon the student's request and subsequent approval by the dean. Such leaves are still counted within the six-year time limitation for degree credits. A student must submit a <a href=\"/academics/graduate-college/sites/neiu.edu.academics.graduate-college/files/documents/2014/10/NEIU%20Leave%20of%20Absence%20Form.pdf\">Leave of Absence Form<\/a>, accompanied by a program of study developed in collaboration with the program advisor that outlines how the student will successfully complete the program upon his/her return.&nbsp;<\/p>",
-    "questions":["can i take a leave of absence","i want to take a break from school","leave program", "leave school", "sit out", "drop out"]
+    "questions":["can i take a leave of absence","i want to take a break from school","leave program", "leave school", "sit out"]
   }
   ,
   {
@@ -37,27 +37,27 @@ var qaData = [
   ,
   {
     "answer":"<h3>I don’t think my course grade was fair. What can I do?<\/h3><p>All students have a legitimate right to seek redress when they consider their final grade in a course to be unreasonable, unjust or capricious. However, a&nbsp;grade appeal must be initiated within two terms of the&nbsp;receipt of the grade in question. For more information concerning the grade appeal process, see the Graduate Grade Appeal information page <a href=\"/academics/graduate-college/current-student-resources/graduate-grade-appeal\">here<\/a>.<\/p>",
-    "questions":["i don’t think my course grade was fair what can i do","my grade is unfair","my grade is wrong", "don't like my grade"]
+    "questions":["i don’t think my course grade was fair what can i do","my grade is unfair","my grade is wrong"]
   }
   ,
   {
     "answer":"<h3>Applying for a job: Can NEIU help?<\/h3><p>Some students seek to complete a graduate degree in order to change career fields. <a href=\"/university-life/career-development-center\">The Career Development Center <\/a>(B 119) assists students in exploring and developing career choices and to prepare for the job search. The Career Development Center offers assistance with resume preparation as well as a computerized Resume Expert system. Other services include employer outreach and contacts, individual job search counseling and a career resources library.<\/p>",
-    "questions":["applying for a job can neiu help","apply for a job","job assistance","career center", "finding a job after graduation", "help with job", "finding a job"]
+    "questions":["applying for a job can neiu help","apply for a job","job assistance","career center", "finding a job after graduation", "job", "help with job", "finding a job"]
   }
   ,
   {
     "answer":"<h3><a>Student Conduct<\/a><\/h3><p>Graduate students are expected to comply with the rules, regulations and policies of Northeastern Illinois University and the College of Graduate Studies and Research, and to exhibit the highest standard of academic integrity. Any student formally charged with committing an act of misconduct or falsification of information provided to the University will be subject to disciplinary procedures as outlined in the University Student Conduct Code.<\/p>",
-    "questions":["student conduct","graduate student conduct"," undergraduate conduct"]
+    "questions":["student conduct","graduate student conduct","conduct"]
   }
   ,
   {
     "answer":"<h3><a>Degree Transcripts and Diplomas<\/a><\/h3><p>Graduate students are expected to comply with the rules, regulations and policies of Northeastern Illinois University and the College of Graduate Studies and Research, and to exhibit the highest standard of academic integrity. Any student formally charged with committing an act of misconduct or falsification of information provided to the University will be subject to disciplinary procedures as outlined in the University Student Conduct Code.<\/p>",
-    "questions":["degree transcripts and diplomas","where can i get my transcripts","how do i get my transcripts", "where do i pick up my diploma", "need transcripts"]
+    "questions":["degree transcripts and diplomas","where can i get my transcripts","how do i get my transcripts", "where do i pick up my diploma", "diploma", "need transcripts"]
   }
   ,
   {
     "answer":"<h3><a>The Graduation Ceremony<\/a><\/h3><p><a href=\"/university-life/event-conference-services/commencement\">Commencement ceremonies</a> are held twice yearly for all Northeastern graduates, including master's degree recipients. The December ceremony includes graduates for the Summer and Fall terms of that academic year. The May ceremony includes the Spring term graduates. The Student Union, Event and Conference Services sends information to eligible graduates during March and October for the May and the December ceremonies, respectively.<\/p>",
-    "questions":["graduation ceremony","when is graduation", "where is graduation ceremony"]
+    "questions":["the graduation ceremony","graduation ceremony","when is graduation"]
   }
   ,
   {
@@ -67,17 +67,17 @@ var qaData = [
   ,
   {
     "answer":"<h3><a>Student Computing Services<\/a><\/h3><p>Student Computing Services provides service to students to support instruction and research. Computer terminals are available for student use in the Library (4th floor, ext. 4639), Bernard Brommel Hall (Room BBH 208, ext. 4641) and Lech Walesa Hall (Room LWH 2109, ext. 4643).<\/p>",
-    "questions":["student computing services","computers","student computers", "help with computer", "computers", "technical support"]
+    "questions":["student computing services","computers","student computing services"]
   }
   ,
   {
     "answer":"<h3><a>Child Care<\/a><\/h3><p><a href=\"/university-life/child-care-center\">Northeastern's Child Care Center</a> is located on campus just north of the Foster Avenue entrance and provides for the care of children age fifteen months through kindergarten. It operates Monday through Friday from 7 a.m. to 6 p.m. Half and full-day sessions are available. The Center is licensed by the State of Illinois Department of Children and Family Services. Contact the Center at ext. 4540.<\/p>",
-    "questions":["child care","child care on campus","child care center", "children", "daycare", "i have kids", "care for my kids"]
+    "questions":["child care","child care on campus","child care center", "children"]
   }
   ,
   {
     "answer":"<h3><a>Counseling<\/a><\/h3><p><a href=\"/university-life/health-and-counseling/counseling-services\">The Counseling Office</a> provides counseling services and counseling-related programs to any student of the University. Services include career counseling, personal counseling, addictions counseling, conflict resolution, and crisis and emergency intervention during regular office hours. All services are free of charge and confidential, as required by state law and professional ethics. The Counseling Office is located in Room D 024, ext. 4650.<\/p>",
-    "questions":["counseling","counseling office","counseling services", "counselor", "psychologist", "psychiatrist"]
+    "questions":["counseling","counseling office","counseling services", "counselor"]
   }
   ,
   {
@@ -87,7 +87,7 @@ var qaData = [
   ,
   {
     "answer":"<h3><a>Library<\/a><\/h3><p>The resources of <a href=\"http://library.neiu.edu/\">the Ronald Williams Library,</a> ext. 4400, are available to help Northeastern students cultivate their intellectual capabilities and research skills. Special features include numerous study areas, facilities for the disabled, private study areas for faculty and graduate students, and a classroom for library instruction.<\/p>",
-    "questions":["ronald williams library","where's the library","neiu library", "library", "library services", "librarian", "research resources"]
+    "questions":["ronald williams library","where's the library","neiu library", "library"]
   }
   ,
   {
@@ -97,12 +97,12 @@ var qaData = [
   ,
   {
     "answer":"<h3><a>How do I know if I am graduating?<\/a><\/h3><p>The Student Union, Event and Conference Services does not decide who graduates. All petitions for graduation are handled by Enrollment Services for undergraduate students, and the Graduate College for graduate students. If you are not sure if you are graduating, call Enrollment Services at (773) 442-4000.&nbsp;<\/p>",
-    "questions":["how do i know if i am graduating","graduation time","am i graduating", "graduation", "ready to graduate"]
+    "questions":["how do i know if i am graduating","graduation time","i am graduating","am i graduating", "graduation", "ready to graduate"]
   }
   ,
   {
     "answer":"<h3>How to Apply?<\/h3>  <p>Begin by either filling out our application online <em>or<\/em> download and print a paper application.<\/p>  <p><a class=\"button-link\" href=\"http://goo.gl/nuZKYM\">Apply Online<\/a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; <a class=\"button-link\" href=\"http://www.neiu.edu/future-students/admissions-forms\">Download an Application<\/a><\/p>  <p>The application process and admission requirements at Northeastern vary depending on applicant type. Before filling out an application, please learn more about our requirements and deadlines below.<\/p>  ",
-    "questions":["how to apply", "submit application", "where to apply", "online application"]
+    "questions":["how to apply", "submit application"]
   }
   ,
   {
@@ -112,7 +112,7 @@ var qaData = [
   ,
   {
     "answer":"<h3>General Admission Requirements<\/h3>  <p>Applicants for graduate admission at Northeastern Illinois University must:<\/p>  <ol><li>  <p>Submit a completed application.<\/p>  <\/li>  <li>  <p>Submit a non-refundable application fee accompanying the application. The application fee can be in the form of a check, money order or bank draft payable to Northeastern Illinois University. If paid in cash at the University Cashier’s Office, the receipt should be attached with the application package.<\/p>  <\/li>  <li>  <p>Possess an undergraduate degree from a regionally-accredited college or university or recognized international college or university.<\/p>  <\/li>  <li>  <p>Provide official transcripts. Transcripts and examination scores must be official and received in an envelope sealed by the sending institution. Hand-carried transcripts will be considered official as long as they are delivered in the sealed envelope. Transcripts become the property of the University and cannot be released.<\/p>  <\/li>  <li>  <p>Meet the requirements of the specific program to which they are applying (see below).<\/p>  <\/li>  <\/ol>    <p>Transcripts from recognized colleges/universities outside of the U.S. require evaluation through Educational Credentials Evaluators, Inc. (ECE) or World Education Services (WES). Three-year degrees from a college or university in a country that is a signed participant in the Bologna Process are eligible to be officially accepted as equivalent to a four-year U.S. degree. In addition to all required documents listed above, students who graduated with a three-year Bologna-compliant degree must submit the accompanying Diploma Supplement (DS).<\/p> ",
-    "questions":["general admissions requirements", "undergraduate admissions requirements", "what do i need to apply"]
+    "questions":["general admissions requirements", "general admissions requirements", "what do i need to apply"]
   }
   ,
   {
@@ -132,76 +132,11 @@ var qaData = [
   ,
   {
     "answer": "<h3>  International Students<\/h3>  <p><strong>International Students<\/strong> are required to follow all admissions processes and fulfill all of the admissions requirements noted above. Additionally, they must demonstrate that they meet eligibility requirements for F-1 visa status and English language proficiency.<\/p>  <p><strong><em>Eligibility for F-1 visa status<\/em><\/strong> requires demonstrating the availability of sufficient funds for attending school and for living expenses. This is done by completing and submitting a notarized Northeastern Financial Statement along with notarized supporting documents, which include an official, notarized bank letter obtained from the financial institution(s) of the sponsor(s) identified in the Northeastern Financial Statement. Further details can be obtained on the website of the <a href=\"http://www.neiu.edu/international\" target=\"_blank\">Office of International Programs<\/a>.<\/p>  <p><strong><em>English language proficiency<\/em>:<\/strong>&nbsp; International students must demonstrate English language proficiency as evidenced through an approved standardized test. International applicants are exempt from this requirement if they have earned a degree from a regionally-accredited U.S. college or university.<\/p>  <p>NEIU accepts scores from both the Test of English as a Foreign Language (TOEFL) as well as from the International English Language Testing System (IELTS). Minimum acceptable scores are 79 on the TOEFL iBT or a 6.5 composite score on the IELTS. Some programs require a TOEFL or IELTS score that is higher than the university minimum requirement; these can be found on the application along with other program-specific requirements.<\/p>  <p>Applicants who do not meet the English language proficiency minimum scores may be considered for conditional admission to a graduate degree program in conjunction with Northeastern’s intensive English program (SAELL). SAELL provides training for international students to meet the English language proficiency requirement. International applicants with IELTS composite scores of 5.0 or better or TOEFL iBT scores of 35 or better may be considered for a special joint admission to SAELL with conditional admission to a graduate degree program. Joint conditional admission requires international students to begin studies at NEIU in the SAELL intensive English program, with a guarantee of admission to the graduate degree program upon demonstration of English language proficiency within 12 months of beginning in the SAELL program. Further details can be obtained on the website of the <a href=\"http://www.neiu.edu/international\" target=\"_blank\">Office of International Programs<\/a>.<\/p>",
-    "questions": ["international students", "requirements for international students"]
+    "questions": ["international students", "international student", "requirements for international students"]
   }
   ,
   {
     "answer": "<h3>Admission Acceptance / Deferral<\/h3>  <p>Students may request, in writing, a deferral of their matriculation for up to one year. Requests for deferment should be submitted to the Graduate Admissions Office.<\/p>",
     "questions":["admission acceptance", "admission deferral"]
-  }
-  ,
-  {
-    "answer": "<h3>When is the last day to drop a course?<\/h3><p>There are several deadlines: The earliest allow you to drop a course and receive full refund, you may drop a course and receive a W grade and some refund or at the latest, no refund. Please check the <a href=\"http:\/\/www.neiu.edu\/academics\/registrar-services\/class-schedules-and-registration\">academic calendar<\/a> for details.<\/p>",
-    "questions":["when is the last day to drop a course", "need to drop a class", "how to drop a course or class"]
-  }
-  ,
-  {
-    "answer": "<h3>Who’s my advisor?<\/h3><p>By last name. If your last name begins with:<br \/>A, B<br \/>Rachel Adler (<a href=\"mailto:r-adler@neiu.edu\">r-adler@neiu.edu<\/a>)<br \/><br \/>C, D, E, F, G, H, I, J<br />Heung Kim (<a href=\"mailto:h-kim@neiu.edu\">h-kim@neiu.edu<\/a>)<br /><br \/>L, M<br \/>Graciela Perera (<a href=\"mailto:gperera@neiu.edu\">gperera@neiu.edu<\/a>)<br \/><br \/>K, N, O, P, Q, R<br \/>Pericles Prezas (<a href=\"mailto:p-prezas@neiu.edu\">p-prezas@neiu.edu<\/a>)<br \/><br \/>S, T, U, V, W, X, Y, Z<br \/>Xiwei Wang (<a href=\"mailto:xwang9@neiu.edu\">xwang9@neiu.edu<\/a>)<br \/><\/p> ",
-    "questions":["who's my advisor", "graduate advisor", "advisment", "help from faculty", "guidance with what classes to register for"]
-  }
-  ,
-  {
-    "answer": "<h3>What do I need to apply?<\/h3><ol><li>Submit a completed application.<\/li><li>Submit a non-refundable application fee ($30) accompanying the application. The application fee can be in the form of a check, money order or bank draft payable to Northeastern Illinois University. If paid in cash at the University Cashier’s Office, the receipt should be attached with the application package.<\/li><li>Possess an undergraduate degree from a regionally-accredited college or university or recognized international college or university.<\/li><li>Provide official transcripts. Transcripts and examination scores must be official and received in an envelope sealed by the sending institution. Hand-carried transcripts will be considered official as long as they are delivered in the sealed envelope. Transcripts become the property of the University and cannot be released.<\/li><li>Meet the requirements of the specific program to which they are applying (see below).<\/li><li>Two letters of recommendation.<\/li><li>A statement of goals and objectives.<\/li><li>Transcripts from all institutions of higher education attended for which the applicant enrolled in credit-earning courses. Transcripts from NEIU do NOT need to be submitted. It is also not necessary to re-submit any transcripts that have been submitted in a previous application to an NEIU graduate program, as long as no additional coursework was completed since the initial transcript was sent to NEIU.<\/li><li>Consult the application instructions for additional application requirements for specific degree programs. Some programs require applicants to take the Graduate Record Examination (GRE general as well as the subject test) or the Graduate Management Admission Test (GMAT). Students applying to these programs must arrange to send the test scores to the Graduate Admissions Office at Northeastern Illinois University to avoid delay or denial of admission. The code for Northeastern Illinois University is 1090.<\/li><li>  Demonstrate a high level of scholastic ability as reflected by an undergraduate grade point average of 2.75 or better (4-point scale). All undergraduate coursework completed prior to the conferral of the bachelor’s degree is computed in this average. Any previous graduate credit is also taken into appropriate consideration.<\/li><li> An average of at least B (3.0) in the undergraduate coursework that is the foundation for the master’s program.<\/li><li>Satisfactory mastery of the program prerequisites.<\/li><li>Departmental or program committee approval. The final admission decision rests with the program faculty.<\/li><\/ol>For more detailed information please contact the <a href=\"http:\/\/www.neiu.edu\/academics\/graduate-college\/for-future-students\/how-apply\" target=\"_blank\">Graduate Admissions Office<\/a>.",
-    "questions":["what do i need to apply", "complete application", "what materials do i need to apply", "ready to apply"]
-  }
-  ,
-  {
-    "answer": "<h3>I meet all the requirements but will not have completed my degree before submitting an application. Can I still apply?<\/h3><p>An undergraduate senior who meets all of the requirements for admission to the College and the specific degree program, and is within 9 semester hours of completing an undergraduate degree may be granted Contingent Admission. Prior to the start of classes in the term of admission, an applicant granted contingent admission must submit an official transcript showing conferral of the degree in order to start graduate coursework. Courses used to fulfill the undergraduate degree requirements will not apply to the graduate degree program of study.<\/p><p>For more detailed information please contact the <a href=\"http:\/\/www.neiu.edu\/academics\/graduate-college\/for-future-students\/how-apply\" target=\"_blank\">Graduate Admissions Office<\/a><\/p>",
-    "questions":["can i still apply", "all requirements met except undergraduate degree", "undergrad apply to grad school", "senior year", "apply to graduate school senior year"]
-  }
-  ,
-  {
-    "answer": "<h3>Are tours of the facility/campus available?<\/h3>Yes, campus tours are available. This is a place holder answer. ",
-    "questions":["facility tour", "campus tour", "visit campus"]
-  }
-  ,
-  {
-    "answer": "<h3>What tests are required?<\/h3><p>None. GRE not required. International students require the TOEFL (with a minimum score of 79) or IELTS (with a minimum score of 6.5)<\/p><p><strong>For international Students:</strong><\/p><p>NEIU accepts scores from both the Test of English as a Foreign Language (TOEFL) as well as from the International English Language Testing System (IELTS). Minimum acceptable scores are 79 on the TOEFL iBT or a 6.5 composite score on the IELTS. Some programs require a TOEFL or IELTS score that is higher than the university minimum requirement; these can be found on the application along with other program-specific requirements.<\/p><p>Applicants who do not meet the English language proficiency minimum scores may be considered for conditional admission to a graduate degree program in conjunction with Northeastern’s intensive English program (SAELL). SAELL provides training for international students to meet the English language proficiency requirement. International applicants with IELTS composite scores of 5.0 or better or TOEFL iBT scores of 35 or better may be considered for a special joint admission to SAELL with conditional admission to a graduate degree program. Joint conditional admission requires international students to begin studies at NEIU in the SAELL intensive English program, with a guarantee of admission to the graduate degree program upon demonstration of English language proficiency within 12 months of beginning in the SAELL program. <\/p><p>Further details can be obtained on the website of the <a href=\"http://www.neiu.edu/academics/international-programs\" target=\"_blank\">Office of International Programs<\/a>.<\/p>",
-    "questions":["tests required for entrance", "is the gre required", "toefl", "international student test"]
-  }
-  ,
-  {
-    "answer": "<h3>What is the GPA requirement?<\/h3><p><\/p> 2.75 or better",
-    "questions":["gpa requirement", "grade point average requirement"]
-  }
-  ,
-  {
-    "answer": "<h3>When should I expect to receive an admissions decision?<\/h3><p>Review and decision of applicant files may take up to 45 days once the file is complete and ready for review. Application evaluation proceeds in two stages once the file is complete: (1) Review of general requirements by Graduate Admissions and Records; (2) Review of program requirements by program advisor. Evaluation will result in Full, Conditional, Contingent or Non-admission. Decision is sent in writing.<\/p><p>For more detailed information please contact the <a href=\"http:\/\/www.neiu.edu\/academics\/graduate-college\/for-future-students\/how-apply\" target=\"_blank\">Graduate Admissions Office<\/a><\/p>",
-    "questions":["when should i expect to receive an admissions decision", "decision letter", "acceptance decision letter"]
-  }
-  ,
-  {
-    "answer": "<h3>I do not have a Computer Science degree. Can I still apply?<\/h3> <p>Yes. Prerequisite classes may be required by the department before starting a CS Graduate Degree.<\/p><p>For more detailed information please consult the <a href=\"http:\/\/www.neiu.edu\/academics\/college-of-arts-and-sciences\/departments\/computer-science\/majors-minors-graduate-programs-certificates\/computer-science-graduat-0\" target=\"_blank\">CS Graduate Program.<\/p>",
-    "questions":["no computer science degree", "computer science department degree prerequisite", "cs graduate degree"]
-  }
-  ,
-  {
-    "answer": "<h3>What are tuitions and fees?<\/h3><p>The cost of tuition depends on several factors, such as whether you are an international student or not, graduate or undergraduate, etc. Please visit <a href=\"http://www.neiu.edu/financial-aid/tuition-and-fees-costs-attendance\" target=\"_blank\">http://www.neiu.edu/financial-aid/tuition-and-fees-costs-attendance<\/a>For further details.<\/p>",
-    "questions":["what are tuitions and fees", "how much is graduate school", "price to attend"]
-  }
-  ,
-  {
-    "answer": "<h3>What kind of financial aid is available?<\/h3><p>The College of Graduate Studies and Research, along with the <a href=\"http://neiu.edu/financial-aid/\" target=\"_blank\">Financial Aid OfficeM<\/a>, will help you with finding and applying for funding that is right for you. The idea of paying for college may seem daunting, but we offer many resources to help pay for your education, including federal, state, local and private funding opportunities.<\/p><p>In addition, the College offers <a href=\"http://neiu.edu/academics/graduate-college/financing-your-graduate-education/graduate-assistantship-application\" target=\"_blank\">assistantships<\/a> to qualified graduate student applicants. These varied assistantships pay for tuition and provide a modest stipend. Recipients of this award are required to work 20 hours per week assisting a department or faculty research.<\/p><p>We also offer the <a href=\"http://neiu.edu/academics/graduate-college/financing-your-graduate-education/graduate-merit-tuition-scholarship\" target=\"_blank\">Graduate Merit Tuition Scholarship</a>, as well as other merit-based and departmental scholarships for qualified students.<\/p>",
-    "questions":["available financial aid", "merit scholarship", "graduate assistantship", "applying for funding"]
-  }
-  ,
-  {
-    "answer": "<h3>When is tuition due?<\/h3><p>Please look at <a href=\"http://www.neiu.edu/financial-aid/tuition-and-fees-costs-attendance\" target=\"_blank\">http://www.neiu.edu/financial-aid/tuition-and-fees-costs-attendance<\/a><\/p>",
-    "questions":["when is tuition due", "tuition deadline", "paying for classes"]
-  }
-  ,
-  {
-    "answer": "<h3>Email and Phone Numbers<\/h3><table><tr><td>Graduate Admissions<\/td><td><a href=\"tel:7734426001\">(773) 442-6001<\/a><\/td><td><\/td><\/tr><tr><td>Financial Aid<\/td><td><a href=\"tel:7734425016\">(773) 442-5016<\/a><\/td><td><a href=\"mailto:financial-aid@neiu.edu\">financial-aid@neiu.edu<\/a><\/td><\/tr><tr><td>Graduate Student Services<\/td><td><a href=\"tel:7734426012\">(773) 442-6012<\/a><\/td><td><a href=\"mailto:graduatestudies@neiu.edu\">graduatestudies@neiu.edu<\/a><\/td><\/tr><tr><td>Computer Science Department<\/td><td><a href=\"tel:7734424720\">(773) 442-4720<\/a><\/td><td><a href=\"mailto:n-jeun@neiu.edu\">n-jeun@neiu.edu<\/a><\/td><\/tr><\/table>",
-    "questions":["graduate admissions phone number", "contact graduate admissions", "contact financial aid", "graduate admissions email", "financial aid phone number", "fincacial aid email", "graduate student services contact", "graduate student services phone number", "graduate student services email", "computer science department contact", "computer science department phone number", "computer science department email", "cs phone mumber", "cs department contact", "cs department phone", "cs department email"]
   }
 ]
