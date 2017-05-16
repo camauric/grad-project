@@ -2,7 +2,19 @@
 findAnswer.js
 author:Candace Maurice
 **/
-var findAnswer = function(inputArray){
+var findAnswer = function(inputArray, matrix){
+
+	// var inputArray = fillArray(matrix[0].length);
+	//
+	//
+	// //1.compare tokens to matrix first row of words to get 1s and 0s for input
+	// $.each(tokens,function(i,token){
+	// 	var indexOfMatch = matrix[0].indexOf(token)
+	// 	if(indexOfMatch > -1){
+	// 		inputArray[indexOfMatch] = 1;
+	// 	};
+	//
+	// });
 
 	//console.log(inputArray);
 	//2.add answer to the matrix (is this necessary?)
@@ -36,7 +48,7 @@ var findAnswer = function(inputArray){
 		//console.log("current row sum outside of loop: " + sum);
 		questionRowSum[i-1] = sum ;
 	}
-	//if no answer found sum = 0 and largest = 0
+	//if no answer found sum = 0 and largest 0
 	if(sum === 0 && largest === 0){
 		//console.log("NO ANSWER FOUND");
 		answerText = "answer not found";
@@ -53,7 +65,7 @@ var findAnswer = function(inputArray){
   var questionTotalsArray = questionsInRow();
 
   $.each(questionTotalsArray,function(i, value){
- 	  //console.log('answer value : ' + answer + " value of i : " + i);
+ 	 //console.log('answer value : ' + answer + " value of i : " + i);
 	 	//if index of answer is less than or equal to the number
 		//of questions in the row then the answer is in that row
 		//set answer found to true
@@ -70,5 +82,6 @@ var findAnswer = function(inputArray){
   });
 
  }
+
  return [answerText, questionRowSum];
 };
