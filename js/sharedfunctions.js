@@ -29,8 +29,9 @@ var getNumQuestions = function(){
  * @return {[string]}             [string without punctuation or special chareacters, only alphanumeric characters]
  */
 var removePunctuation = function(inputString){
-   //console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
-   return inputString.replace(/[^a-z0-9\s]/gi, '');
+   console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
+   return inputString.replace(/[^a-z0-9\s]/gi, ' ');
+
 
 };
 

@@ -2,7 +2,7 @@
 var qaData = [
   {
    "answer":" <h3>I have been admitted to a Northeastern Illinois University graduate program. Now what?<\/h3><ul> <li> <strong> Meet with your graduate advisor/program coordinator<\/strong>. Graduate advisors and program&nbsp;coordinators handle your&nbsp;admission to the program and graduation applications, advise you on your program of study, inform you of departmental regulations and procedures, monitor your academic progress, provide guidance regarding Graduate Studies policies and procedures, and can nominate you&nbsp;for merit tuition scholarships.<\/li> <li><strong>Investigate financial support options<\/strong>. Financial Aid, Graduate Assistantships, and Graduate Merit Tuition Award Scholarship are all options. If you are an underrepresented minority from Illinois, and you are interested in someday working in higher education, you may be eligible for the Diversifying Higher Education Faculty in Illinois (DFI) Program.&nbsp;<\/li> <li><strong>Register for classes.<\/strong> Be sure to note all <a href=\"http://neiu.edu/academics/registrar-services/class-schedules-and-registration\">registration guidelines and deadlines.<\/a><\/li><\/ul>",
-   "questions":["i have been admitted to a northeastern illinois university graduate program now what","registration","how do i register for classes", "next step", "admitted to program"]
+   "questions":["i have been admitted to a northeastern illinois university graduate program now what","how do i register for classes", "next step after admission or being admitted"]
   }
     ,
   {
@@ -67,37 +67,37 @@ var qaData = [
   ,
   {
     "answer":"<h3><a>Student Computing Services<\/a><\/h3><p>Student Computing Services provides service to students to support instruction and research. Computer terminals are available for student use in the Library (4th floor, ext. 4639), Bernard Brommel Hall (Room BBH 208, ext. 4641) and Lech Walesa Hall (Room LWH 2109, ext. 4643).<\/p>",
-    "questions":["student computing services","computers","student computers", "help with computer", "computers", "technical support"]
+    "questions":["student computing services","student computers", "help with computer", "technical support"]
   }
   ,
   {
     "answer":"<h3><a>Child Care<\/a><\/h3><p><a href=\"/university-life/child-care-center\">Northeastern's Child Care Center</a> is located on campus just north of the Foster Avenue entrance and provides for the care of children age fifteen months through kindergarten. It operates Monday through Friday from 7 a.m. to 6 p.m. Half and full-day sessions are available. The Center is licensed by the State of Illinois Department of Children and Family Services. Contact the Center at ext. 4540.<\/p>",
-    "questions":["child care","child care on campus","child care center", "children", "daycare", "i have kids", "care for my kids"]
+    "questions":["child care","child care or daycare on campus for my children or kids","child care center","care for my kids"]
   }
   ,
   {
     "answer":"<h3><a>Counseling<\/a><\/h3><p><a href=\"/university-life/health-and-counseling/counseling-services\">The Counseling Office</a> provides counseling services and counseling-related programs to any student of the University. Services include career counseling, personal counseling, addictions counseling, conflict resolution, and crisis and emergency intervention during regular office hours. All services are free of charge and confidential, as required by state law and professional ethics. The Counseling Office is located in Room D 024, ext. 4650.<\/p>",
-    "questions":["counseling","counseling office","counseling services", "counselor", "psychologist", "psychiatrist"]
+    "questions":["counseling office","counseling services", "counselor psychologist or psychiatrist"]
   }
   ,
   {
     "answer":"<h3><a>Student Disability Services<\/a><\/h3><p><a href=\"/university-life/student-disability-services\">Student Disability Services</a> provides various types of academic assistance based on diagnosed needs to students with documented physical and/or learning disabilities. Contact the Accessibility Center in Room D 104 or at ext. 4595 for information about the services provided.<\/p>",
-    "questions":["student disability services","student disabilities","disability","disabled", "disabilities","handicap"]
+    "questions":["student disability services","student with disabilities disabled or handicap"]
   }
   ,
   {
     "answer":"<h3><a>Library<\/a><\/h3><p>The resources of <a href=\"http://library.neiu.edu/\">the Ronald Williams Library,</a> ext. 4400, are available to help Northeastern students cultivate their intellectual capabilities and research skills. Special features include numerous study areas, facilities for the disabled, private study areas for faculty and graduate students, and a classroom for library instruction.<\/p>",
-    "questions":["ronald williams library","where's the library","neiu library", "library", "library services", "librarian", "research resources"]
+    "questions":["ronald williams library","where's the library","neiu library", "library services", "librarian help", "research resources"]
   }
   ,
   {
     "answer":"<h3><a>Veteran's Services<\/a><\/h3><p><a href=\"/future-students/all-departments/veterans-services\">Veteran's Services</a> assists with benefits and educational planning while also offering workshops and programs to meet the special needs of veterans. The office is located in Room D-130. Call ext. 4028 for information about the services provided.<\/p>",
-    "questions":["veterans services","veterans","vets","army","navy","airforce","marines","veteran"]
+    "questions":["veterans services","veterans vets army navy airforce marines veteran"]
   }
   ,
   {
     "answer":"<h3><a>How do I know if I am graduating?<\/a><\/h3><p>The Student Union, Event and Conference Services does not decide who graduates. All petitions for graduation are handled by Enrollment Services for undergraduate students, and the Graduate College for graduate students. If you are not sure if you are graduating, call Enrollment Services at (773) 442-4000.&nbsp;<\/p>",
-    "questions":["how do i know if i am graduating","graduation time","am i graduating", "graduation", "ready to graduate"]
+    "questions":["how do i know if i am graduating","graduation time","am i graduating", "ready to graduate"]
   }
   ,
   {
@@ -147,7 +147,7 @@ var qaData = [
   ,
   {
     "answer": "<h3>Who’s my advisor?<\/h3><p>By last name. If your last name begins with:<br \/>A, B<br \/>Rachel Adler (<a href=\"mailto:r-adler@neiu.edu\">r-adler@neiu.edu<\/a>)<br \/><br \/>C, D, E, F, G, H, I, J<br />Heung Kim (<a href=\"mailto:h-kim@neiu.edu\">h-kim@neiu.edu<\/a>)<br /><br \/>L, M<br \/>Graciela Perera (<a href=\"mailto:gperera@neiu.edu\">gperera@neiu.edu<\/a>)<br \/><br \/>K, N, O, P, Q, R<br \/>Pericles Prezas (<a href=\"mailto:p-prezas@neiu.edu\">p-prezas@neiu.edu<\/a>)<br \/><br \/>S, T, U, V, W, X, Y, Z<br \/>Xiwei Wang (<a href=\"mailto:xwang9@neiu.edu\">xwang9@neiu.edu<\/a>)<br \/><\/p> ",
-    "questions":["who's my advisor", "graduate advisor", "advisment", "help from faculty", "guidance with what classes to register for"]
+    "questions":["who's my advisor", "graduate advisor", "advisment", "help from faculty", "guidance with what class registration", "student advisor"]
   }
   ,
   {
@@ -187,7 +187,7 @@ var qaData = [
   ,
   {
     "answer": "<h3>What are tuitions and fees?<\/h3><p>The cost of tuition depends on several factors, such as whether you are an international student or not, graduate or undergraduate, etc. Please visit <a href=\"http://www.neiu.edu/financial-aid/tuition-and-fees-costs-attendance\" target=\"_blank\">http://www.neiu.edu/financial-aid/tuition-and-fees-costs-attendance<\/a>For further details.<\/p>",
-    "questions":["what are tuitions and fees", "how much is graduate school", "price to attend"]
+    "questions":["what are tuitions and fees", "how much is graduate school", "price to attend cost to attend"]
   }
   ,
   {

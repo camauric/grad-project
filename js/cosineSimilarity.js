@@ -41,7 +41,7 @@ var getValues = function(inputArray, currentQuestionArray){
 	denominator = Math.sqrt(sumA) * Math.sqrt(sumB);
 	//console.log("NUMERATOR SUM : " + sum);
 	answer = [numerator, denominator];
-
+	console.log("COSINE ANSWER : " + answer);
 	return [numerator, denominator];
 };
 

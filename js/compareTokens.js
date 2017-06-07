@@ -16,6 +16,6 @@ var compareTokens = function(tokens, matrix){
 		};
 
 	});
-
+   console.log("input array" + inputArray);
   return inputArray;
 };
