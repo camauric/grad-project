@@ -1,5 +1,5 @@
 /****
-* file: getTokens.js
+* file: tokens.js
 * author: Candace Maurice
 * date: March 20, 2017
 *
@@ -87,7 +87,7 @@ var getFinalTokens = function(question){
   question = $.trim(question);
   //remove punctuation and specila characters
   question = removePunctuation(question);
-  
+
   //split into array of tokens
   currentTokens = getTokens(question);
   //remove stop words
