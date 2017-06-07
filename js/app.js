@@ -39,22 +39,30 @@ $(document).ready(function(){
 
       	//tokenize search string
       	var tokens = getFinalTokens(searchString);
+      	//console.log("TOKENS input + " + tokens);
 	 	//compare input to matrix
 		var inputArray = compareTokens(tokens,matrix);
 
 		//check if inputArray has any matches
 		var inputArraySum = arraySum(inputArray);
+		//console.log("INPUT ARRAY SUM : " + inputArraySum);
 
 		if(inputArraySum > 0){
 			var cosineTotalsArray = getCosineTotals(inputArray, matrix);
+			if(arraySum(cosineTotalsArray) > 0){
+				var questionsArray = buildQuestionsArray();
 
-			var questionsArray = buildQuestionsArray();
+				var topThree = getTopThreeQuestions(cosineTotalsArray, questionsArray);
 
-			var topThree = getTopThreeQuestions(cosineTotalsArray, questionsArray);
+				logTopThree(searchString,topThree);
 
-			logTopThree(searchString,topThree);
+				answer = findAnswer(topThree, questionAnswerArray);
 
-			answer = findAnswer(topThree, questionAnswerArray);
+			}else{
+				answer = "<h3> Answer not found! Please try again!</h3>";
+			}
+
+			
 
 		}else{
 			answer = "<h3> Answer not found! Please try again!</h3>";

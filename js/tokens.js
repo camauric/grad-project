@@ -87,6 +87,7 @@ var getFinalTokens = function(question){
   question = $.trim(question);
   //remove punctuation and specila characters
   question = removePunctuation(question);
+  
   //split into array of tokens
   currentTokens = getTokens(question);
   //remove stop words
