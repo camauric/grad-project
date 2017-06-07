@@ -20,16 +20,24 @@ var buildMatrix = function(){
 
         numQuestions ++;
 
-        tokens = getFinalTokens(question);
+        questTokens = getFinalTokens(question);
 
         //push tokens onto array
-        for(var k in tokens){
+        for(var k in questTokens){
 
-          allTokens.push(tokens[k]);
+          allTokens.push(questTokens[k]);
         }
 
 
     });
+
+      answTokens = getFinalTokens(strip(qaData[i]['answer']));
+
+      //push tokens onto array
+        for(var k in answTokens){
+
+          allTokens.push(answTokens[k]);
+        }
   }
   //unique values as tokens
   //var uniqueTokens = allTokens.filter(function(elem, pos) {
@@ -80,3 +88,9 @@ var buildMatrix = function(){
 return(matrix);
 
 }; //end document.ready()function
+
+var strip = function (html){
+   var tmp = document.implementation.createHTMLDocument("New").body;
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
+};

@@ -36,17 +36,27 @@ var checkAnswerWeights = function(answerArray){
 		weight = value[1];
 
 		if((weight === previousWeight) && (value[2] !== previousAnswerIndex)){
-			answerText += value[0];
+			answerTextArray.push(value[0]);
 		}
-		else if(weight > previousWeight){
-			answerText = value[0];
+		//else if(weight > previousWeight && answerTextArray !== undefined && previousAnswerIndex !== 0){
+		else if(value[2] === previousAnswerIndex){
+			//do nothing
+		}
+		else{
+			//insert answer berfore current answer
+			answerTextArray.push(value[0]);
+			//answerText = value[0];
 		}
 
 		previousWeight = weight;
 		previousAnswerIndex = value[2];
-		//answerText += value[0];
 
 	});
+
+	
+ 	$.each(answerTextArray,function(index,value){
+ 		answerText += value;
+ 	});
 
 	return answerText;
 
