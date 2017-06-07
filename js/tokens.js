@@ -90,9 +90,9 @@ var getFinalTokens = function(question){
   //split into array of tokens
   currentTokens = getTokens(question);
   //remove stop words
-  tokens = removeStopWords(currentTokens);
+  tokensNoStopWords = removeStopWords(currentTokens);
   //repalace stemwords
-  //tokensWordStemmer = stemWords(tokensNoStopWords);
+  tokens = stemWords(tokensNoStopWords);
 
   return tokens;
 }
