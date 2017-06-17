@@ -12,24 +12,23 @@
  */
 var removeStopWords = function(tokens){
 //console.log("TOKENS BEFORE STOP WORDS" + tokens);
-  $.grep(tokens, function(token , i ){
+  var tokensNoStopWords = [];
+  $.each(tokens, function(token , i ){
 
     $.each(stopwords, function(key, stopword){
 
       //console.log(stopword + " current stop word. This is the current token. " + token);
 
-      if(token === stopword){
+      if(token !== stopword){
 
-        var index = tokens.indexOf(stopword);
-
-        tokens.splice(index, 1);
+        tokensNoStopWords.push(token);
       }
 
     });
 
   });
   //console.log("TOKENS AFTER STOP WORDS" + tokens);
-  return tokens;
+  return tokensNoStopWords;
 
 };
 
