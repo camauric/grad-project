@@ -29,7 +29,7 @@ var getNumQuestions = function(){
  * @return {[string]}             [string without punctuation or special chareacters, only alphanumeric characters]
  */
 var removePunctuation = function(inputString){
-   console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
+   //console.log("removed special charaters" + inputString.replace(/[^a-z0-9\s]/gi, ''));
    return inputString.replace(/[^a-z0-9\s]/gi, ' ');
 
 
@@ -42,7 +42,7 @@ var removePunctuation = function(inputString){
  *
  */
 var logMatrix = function(matrix){
-  console.log("MATRIX : ")
+  //console.log("MATRIX : ")
   arrText = ' ';
   for (var i = 0; i < matrix.length; i++) {
             for (var j = 0; j < matrix[i].length; j++) {
