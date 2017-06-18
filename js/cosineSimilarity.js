@@ -2,8 +2,6 @@
 * file:consineSimilarity
 * author:Candace Maurice
 * date:4/21/17
-* todo: combine numerator and denominator functions no need to loop through
-* the same array twice
 */
 
 var cosineSimilarity = function(inputArray, currentQuestionArray){
@@ -41,29 +39,9 @@ var getValues = function(inputArray, currentQuestionArray){
 	denominator = Math.sqrt(sumA) * Math.sqrt(sumB);
 	//console.log("NUMERATOR SUM : " + sum);
 	answer = [numerator, denominator];
-	console.log("COSINE ANSWER : " + answer);
+	//console.log("COSINE ANSWER : " + answer);
 	return [numerator, denominator];
 };
-
-// var getDenominator = function(inputArray, currentQuestionArray){
-// 	//console.log( "INPUT ARRAY :  " + inputArray);
-// 	//console.log("currentQuestionArray : " + currentQuestionArray);
-//
-// 	var sumA = sumB = answer = 0;
-//
-// 	for(var i = 0; i < inputArray.length; i++){
-//
-// 		sumA += inputArray[i] * inputArray[i];
-// 		sumB += currentQuestionArray[i] * currentQuestionArray[i];
-//
-// 	}
-// 	//console.log("SUM A = " + sumA + " SUM B = " + sumB);
-// 	answer = Math.sqrt(sumA) * Math.sqrt(sumB);
-//
-//
-// 	return answer;
-//
-// };
 
 var getCosineTotals = function(inputArray, matrix){
 

@@ -13,19 +13,11 @@
 var removeStopWords = function(tokens){
 //console.log("TOKENS BEFORE STOP WORDS" + tokens);
   var tokensNoStopWords = [];
-  $.each(tokens, function(token , i ){
-
-    $.each(stopwords, function(key, stopword){
-
-      //console.log(stopword + " current stop word. This is the current token. " + token);
-
-      if(token !== stopword){
-
-        tokensNoStopWords.push(token);
-      }
-
-    });
-
+  $.each(tokens, function(i, token ){
+      
+     if(stopwords.indexOf(token) === -1){
+       tokensNoStopWords.push(token);
+     }
   });
   //console.log("TOKENS AFTER STOP WORDS" + tokens);
   return tokensNoStopWords;
@@ -43,7 +35,7 @@ var stemWords = function(tokensNoStopWords){
 
   $.each(tokensNoStopWords, function(index, token){
 
-    //console.log("Current Token " + token);
+    console.log("Current Token " + token);
 
     stemmedWord = stemmer(token);
 
@@ -84,17 +76,21 @@ var getTokens = function(inputString){
 var getFinalTokens = function(question){
   //get tokens for current question
   question = $.trim(question);
+  
   //remove punctuation and specila characters
   question = removePunctuation(question);
+  
 
   //split into array of tokens
   currentTokens = getTokens(question);
+  
   //remove stop words
   tokensNoStopWords = removeStopWords(currentTokens);
-  //repalace stemwords
-  tokens = stemWords(tokensNoStopWords);
 
-  return tokens;
+  //repalace stemwords
+  //tokens = stemWords(tokensNoStopWords);
+
+  return tokensNoStopWords;
 }
 
 /**

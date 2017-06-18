@@ -32,7 +32,8 @@ var getTopThreeQuestions = function(consineTotalsArray, questionsArray){
 
   }
 
-  //add topThree to array
+  //add topThree to array similarity score of 0 is not a match
+  //and -1 is the default value when initialized.
  if(max1 !== 0 && max1 !== -1){
   topThree.push([max1,questionsArray[max1Index], max1Index]);
  }
