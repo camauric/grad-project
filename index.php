@@ -21,8 +21,8 @@
         </style>
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/main.css">
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>-->
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        
+        <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -137,8 +137,8 @@
       </div>
       </footer>
       <div class="footer_copyright"></div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+        <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
 
         <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4/angular-sanitize.js></script>-->
 
@@ -148,10 +148,7 @@
         <script src="js/wordstemmer.js"></script>
         <script src="js/sharedfunctions.js"></script>
         <script src="js/findAnswer.js"></script>
-        <!--<script src="js/userInput.js"></script>-->
-        <script src ="js/cosineSimilarity.js"></script>
-        
-        
+        <script src="js/cosineSimilarity.js"></script>
         <script src="js/tokens.js"></script>
         <script src="js/qs_and_as.json"></script>
         <script src="js/buildMatrix.js"></script>

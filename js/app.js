@@ -1,27 +1,41 @@
+/**
+ * file: app.js
+ * author: candace maurice
+ * date: March 21, 2017
+ * main application file
+ */
 $(document).ready(function(){
 
-	//1.build intial matrix
+	/**********************************************
+	* 1.build intial matrix
+	***********************************************/
 	var matrix = buildMatrix();
 	//build array of all questions with corresponding answer index
 	var questionAnswerArray = buildQuestionsArray();
 	//console.log(matrix);
 
-  //2.get search string (user question)
+   /***********************************************
+   * 2.get search string (user question)
+   ************************************************/
 
-  //searchstring variable
+	//searchstring variable
 	var searchString = answer =  '';
 
 
-	//1. get question if enter button pressed
+	/***********************************************
+	3. get question if enter button pressed
+	************************************************/
 	$('#srch_term').keydown(function(e){
 
 		if(e.keyCode === 13){
-
-			$('#search_button').click();
+		e.preventDefault();
+		$('#search_button').click();
 		}
 	});
 
-	//2. get question if search button clicked
+	/************************************************
+	4. get question if search button  or enter clicked
+	************************************************/
 	$('#search_button').on('click', function(e){
 
 		e.preventDefault();
@@ -31,55 +45,67 @@ $(document).ready(function(){
 		//check for empty string
 		if (searchString === ''){
 
-			alert("Please Enter a Question");
+		alert("Please Enter a Question");
 
-			$('#srch_term').focus();
+		$('#srch_term').focus();
 
 		}else{
 
-      	//tokenize search string
-      	var tokens = getFinalTokens(searchString);
-      	//console.log("TOKENS input + " + tokens);
-	 	//compare input to matrix
+       /********************************************
+       * 5. tokenize search string
+       ********************************************/
+       var tokens = getFinalTokens(searchString);
+       console.log(tokens);
+
+		/*******************************************
+		* 6. compare input to matrix
+		********************************************/
 		var inputArray = compareTokens(tokens,matrix);
 
-		//check if inputArray has any matches
+		/*******************************************
+		* 7. check if inputArray has any matches
+		********************************************/
 		var inputArraySum = arraySum(inputArray);
-		//console.log("INPUT ARRAY SUM : " + inputArraySum);
 
+		/********************************************
+		* if matches in input array
+		********************************************/
 		if(inputArraySum > 0){
-			var cosineTotalsArray = getCosineTotals(inputArray, matrix);
-			if(arraySum(cosineTotalsArray) > 0){
-				var questionsArray = buildQuestionsArray();
+		/*****************************************
+		* 9. get cosine totals
+		*****************************************/
+		var cosineTotalsArray = getCosineTotals(inputArray, matrix);
 
-				var topThree = getTopThreeQuestions(cosineTotalsArray, questionsArray);
+		/*****************************************
+		* 10. build array of questions and answer
+		******************************************/
+		var questionsArray = buildQuestionsArray();
 
-				logTopThree(searchString,topThree);
+		/****************************************
+		* 11. get the top three question answer
+		*****************************************/
+		var topThree = getTopThreeQuestions(cosineTotalsArray, questionsArray);
 
-				answer = findAnswer(topThree, questionAnswerArray);
+		/******************************************
+		* 12. console log top three answers
+		******************************************/
+		logTopThree(searchString,topThree);
 
-			}else{
-				answer = "<h3> Answer not found! Please try again!</h3>";
-			}
-
-			
+		/******************************************
+		* 13. find answers in questionsAnswerArray for top three
+		*******************************************/
+		answer = findAnswer(topThree, questionAnswerArray);
 
 		}else{
-			answer = "<h3> Answer not found! Please try again!</h3>";
+		/********************************************
+		* 14. answer not found
+		*********************************************/
+		answer = "<h3> Answer not found! Please try again!</h3>";
 		}
 
-
-      	//run through the matrix, find the answer
-      	//var returnedValues = findAnswer(inputArray,matrix);
-
-		//var answer = returnedValues[0];
-
-		//var questionsTotals = returnedValues[1];
-
-		//
-
-		//var topThree = topThreeQuestions(searchString,questionsTotals,questionsArray);
-        //display the answer
+        /***********************************************
+        * 15 .display the answer on the web page
+        *************************************************/
         $('.main_body').html(answer);
 
 		}
