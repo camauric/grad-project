@@ -35,7 +35,6 @@ var stemWords = function(tokensNoStopWords){
 
   $.each(tokensNoStopWords, function(index, token){
 
-    console.log("Current Token " + token);
 
     stemmedWord = stemmer(token);
 
@@ -88,9 +87,9 @@ var getFinalTokens = function(question){
   tokensNoStopWords = removeStopWords(currentTokens);
 
   //repalace stemwords
-  //tokens = stemWords(tokensNoStopWords);
+  tokens = stemWords(tokensNoStopWords);
 
-  return tokensNoStopWords;
+  return tokens;
 }
 
 /**
