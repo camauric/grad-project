@@ -32,16 +32,15 @@ var buildMatrix = function(){
     });
       
     // add answers to matrix 
-    //uncomment this section to add answers
+    //uncomment this section to add answers lines 36 -42
+     // answTokens = getFinalTokens(strip(qaData[i]['answer']));
 
-    /* answTokens = getFinalTokens(qaData[i]['answer']);
+     //     //push tokens onto array
+     //   for(var k in answTokens){
 
-         //push tokens onto array
-       for(var k in answTokens){
-
-         allTokens.push(answTokens[k]);
-       }
-    */
+     //     allTokens.push(answTokens[k]);
+     //   }
+    
   }
   //unique values as tokens
   //var uniqueTokens = allTokens.filter(function(elem, pos) {
@@ -92,3 +91,11 @@ var buildMatrix = function(){
 return(matrix);
 
 }; 
+
+//strip html characters from text
+var strip = function(html)
+{
+   var tmp = document.createElement("DIV");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
+};

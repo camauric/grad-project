@@ -6,6 +6,7 @@
 
 var cosineSimilarity = function(inputArray, currentQuestionArray){
 	var similarity = 0;
+	var limitFlag = false;
 	var values = [];
 	//console.log( "INPUT ARRAY :  " + inputArray);
 	//console.log("currentQuestionArray : " + currentQuestionArray);
@@ -20,7 +21,8 @@ var cosineSimilarity = function(inputArray, currentQuestionArray){
 		similarity = numerator/denominator;
 	}
 
-	return similarity;
+	limitFlag = checkSimilarity(similarity);
+	return [similarity, limitFlag];
 
 };
 

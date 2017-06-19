@@ -55,7 +55,7 @@ $(document).ready(function(){
        * 5. tokenize search string
        ********************************************/
        var tokens = getFinalTokens(searchString);
-       console.log(tokens);
+       console.log( "Tokens : " + tokens);
 
 		/*******************************************
 		* 6. compare input to matrix
@@ -92,7 +92,12 @@ $(document).ready(function(){
 		logTopThree(searchString,topThree);
 
 		/******************************************
-		* 13. find answers in questionsAnswerArray for top three
+		* 13. check if similarity is greater than 0.5
+		*******************************************/
+		checkSimilarity(topThree);
+
+		/******************************************
+		* 14. find answers in questionsAnswerArray for top three
 		*******************************************/
 		answer = findAnswer(topThree, questionAnswerArray);
 

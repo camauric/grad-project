@@ -155,6 +155,7 @@
         <script src="js/compareTokens.js"></script>
         <script src="js/topthreequestions.js"></script>
         <script src="js/sumRowTotals.js"></script>
+        <script src="js/checkSimilarity.js"></script>
         <script src="js/app.js"></script>
 
 
