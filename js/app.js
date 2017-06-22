@@ -86,15 +86,17 @@ $(document).ready(function(){
 		*****************************************/
 		var topThree = getTopThreeQuestions(cosineTotalsArray, questionsArray);
 
-		/******************************************
-		* 12. console log top three answers
-		******************************************/
-		logTopThree(searchString,topThree);
+		
 
 		/******************************************
 		* 13. check if similarity is greater than 0.5
 		*******************************************/
 		checkSimilarity(topThree);
+
+		/******************************************
+		* 12. console log top three answers
+		******************************************/
+		logTopThree(searchString,topThree);
 
 		/******************************************
 		* 14. find answers in questionsAnswerArray for top three

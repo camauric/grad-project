@@ -25,9 +25,12 @@ var findAnswer = function(topThree,questionAnswerArray){
 
 var checkAnswerWeights = function(answerArray){
 
-	var previousAnswerIndex = answerArray[0][2];//index of top answer
+	var previousAnswerIndex = [];
 	var answerText = '';
 	var answerTextArray = [];
+
+	//push top answer index on to previous answer index
+	previousAnswerIndex.push(answerArray[0][2]) ;//index of top answer)
 
 	//check if top answer similarity is above .5
 	//false push (extra text)
@@ -41,11 +44,11 @@ var checkAnswerWeights = function(answerArray){
 	for(var i = 1; i < answerArray.length; i++){
 		//check if other answers are within 0.2 of top answer
 		//check if answers are the same
-		if(answerArray[i][4] == true && previousAnswerIndex !== answerArray[i][2]){
+		if(answerArray[i][4] == true && previousAnswerIndex.indexOf(answerArray[i][2]) === -1){
 			answerTextArray.push(answerArray[i][0]);
 		}
 
-		previousAnswerIndex = answerArray[i][2];
+		previousAnswerIndex .push(answerArray[i][2]);
 
 	}
 
@@ -56,42 +59,3 @@ var checkAnswerWeights = function(answerArray){
 	return answerText;
 	
 };
-
-// var checkAnswerWeights = function(answerArray){
-// 	console.log("ANSWER ARRAY : " +  answerArray);
-// 	//answerArray = ['answer text', similarity, index of answer]
-// 	var answerTextArray = [];
-// 	var weight = previousWeight = previousAnswerIndex = 0;
-// 	var equal = false;
-// 	var answerText = '';
-
-// 	$.each(answerArray, function(i, value){
-
-// 		weight = value[1];
-
-// 		if((weight === previousWeight) && (value[2] !== previousAnswerIndex)){
-// 			answerTextArray.push(value[0]);
-// 		}
-// 		//else if(weight > previousWeight && answerTextArray !== undefined && previousAnswerIndex !== 0){
-// 		else if(value[2] === previousAnswerIndex){
-// 			//do nothing
-// 		}
-// 		else{
-// 			//insert answer berfore current answer
-// 			answerTextArray.push(value[0]);
-// 			//answerText = value[0];
-// 		}
-
-// 		previousWeight = weight;
-// 		previousAnswerIndex = value[2];
-
-// 	});
-
-	
-//  	$.each(answerTextArray,function(index,value){
-//  		answerText += value;
-//  	});
-
-// 	return answerText;
-
-// };

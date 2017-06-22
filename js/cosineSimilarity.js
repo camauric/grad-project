@@ -53,7 +53,7 @@ var getCosineTotals = function(inputArray, matrix){
 
 			cosineTotals.push(cosineSimilarity(inputArray, matrix[i]));
 	}
-
+	console.log("Cosine Totals Array : " + cosineTotals);
 	return cosineTotals;
 
 };
