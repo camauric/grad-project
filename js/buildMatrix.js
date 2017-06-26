@@ -33,13 +33,13 @@ var buildMatrix = function(){
       
     // add answers to matrix 
     //uncomment this section to add answers lines 36 -42
-     // answTokens = getFinalTokens(strip(qaData[i]['answer']));
+     answTokens = getFinalTokens(strip(qaData[i]['answer']));
 
-     //     //push tokens onto array
-     //   for(var k in answTokens){
+         //push tokens onto array
+       for(var k in answTokens){
 
-     //     allTokens.push(answTokens[k]);
-     //   }
+         allTokens.push(answTokens[k]);
+     }
     
   }
   //unique values as tokens

@@ -13,12 +13,12 @@ var findAnswer = function(topThree,questionAnswerArray){
 
 
 	$.each(topThree, function(i, indexOfQuestion){
-		console.log("Index of question : " + indexOfQuestion);
+		//console.log("Index of question : " + indexOfQuestion);
                          //answer text from qaData , 				cosinesimilarity,  indexofQuestion,  	  limit flag, 			distanceflag   
 		answerArray.push([qaData[indexOfQuestion[1][1]]['answer'], indexOfQuestion[0], indexOfQuestion[1][1], indexOfQuestion[3], indexOfQuestion[4]]);
 
 	});
-	console.log("answer Array : " + answerArray);
+	//console.log("answer Array : " + answerArray);
 	answerText = checkAnswerWeights(answerArray);
 	return answerText;
 };

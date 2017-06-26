@@ -63,7 +63,7 @@ var logTopThree = function(inputString, topThree){
   output += "\n USER PROCESSES with stopwords : " + getFinalTokensWithStopWords(inputString);
 
   $.each(topThree, function(i,value){
-    console.log("here : " + value);
+    
     if(value){
 
        output += "\n Q" + (i+1) + ": " + value[1] + " : " + value[0] + " index of question: " + value[2] + " limitFlag : " + value[3]+ " distanceFlag : " + value[4];
