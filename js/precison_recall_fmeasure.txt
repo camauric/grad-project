@@ -38,75 +38,167 @@ I chose 10 at random:
 9.  What is the minimum GPA required to be accepted into this grad school
 10. How long will it take to complete grad school/program
 
-I performed recall and precision with the 10 questions without including questions, and the
-results are below:
+I performed recall and precision with the 10 questions WITHOUT including the answers in the matrix and 
+fmeasure(F=2*(precision*recall)/(precision+recall), and the results are below:
 
 1. input: Do you offer scholarships/fellowships
-   returned question :     	Q143
-   all correct questions: 	Q143
+   returned question :     Q121
+   all correct questions: 	Q121
    precsion:				1/3 = .333
    recall:					1/1 = 1
-   fmeasure:
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
 
 2. input: What forms of financial aid is offered
-   returned question: 		Q142
-   all correct questions: 	Q142
+   returned question: 		Q120
+   all correct questions: 	Q120
    precision:				1/3 = .333
    recall:					1/1 = 1
-   fmeasure:
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
 
 3. input: Are there any application fees and/or waivers
-   returned question: 		Q68,Q66
-   all correct questions: 	Q99
-   precision: 				0/3 = 0
-   recall:					0/1 = 0
-   fmeasure:				
+   returned question: 		Q98
+   all correct questions: 	Q98
+   precision: 				1/3 = .333
+   recall:					1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622				
 
 4. input: What are the application deadlines (rolling admissions)
    returned question: 		Q68
    all correct questions: 	Q68
    precision:				1/3 = .333
    recall:					1/1 = 1
-   fmeasure:
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
 
-5. input: On average, how long will it take to complete grad school/program
-   returned question: 		Q7,Q0
-   all correct questions: 	Q23,Q25
-   precision:				0/3 = 0
-   recall:					0/2 = 0
-   fmeasure:
+5. input: How long will it take to complete grad school/program
+   returned question: 		Q20,Q24,Q25
+   all correct questions: 	Q24,Q25
+   precision:				2/3 = .666
+   recall:					2/2 = 1
+   fmeasure:            2 × (.666 × 1) ÷ (.666 + 1) = 0.79951980792
 
 6. input: Is housing available for grad students
    returned question: 		Q41, Q33
    all correct questions: 	none
    precision:				0/3 = 0
    recall:					0/0	= 0	
-   fmeasure:
+   fmeasure:            2 × (0 × 0) ÷ (0 + 0) = 0
 
 7. input: Are GRE test scores required
-   returned question: 		Q
-   all correct questions: 	Q
-   precision:
-   recall:
-   fmeasure:
+   returned question: 		Q108
+   all correct questions: 	Q101, 109
+   precision:           1/3 = .333
+   recall:              1/2 = .5
+   fmeasure:            2 × (.333 × .5) ÷ (.333 × .5) = 0.39975990396
 
 8. input: Do students have to publish an article or do a master's project before graduation
-   returned question: 		Q
-   all correct questions: 	Q
-   precision:
-   recall:
-   fmeasure:
+   returned question: 		Q93, Q59
+   all correct questions: 	0
+   precision:           0/3 = 0
+   recall:              0/0 = 0
+   fmeasure:            2 × (0 × 0) ÷ (0 + 0) = 0
+
 
 9. input: What is the minimum GPA required to be accepted into this grad school
-   returned question: 		Q
-   all correct questions: 	Q
-   precision:
-   recall:
-   fmeasure:
+   returned question: 		Q110
+   all correct questions: 	Q110
+   precision:           1/3 = .333
+   recall:              1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
 
 10. input: How long will it take to complete grad school/program
-   returned question: 		Q
-   all correct questions: 	Q
-   precision:
-   recall:
-   fmeasure:
+   returned question: 		Q20,Q25,Q24
+   all correct questions: 	0
+   precision:            0/3 = 0
+   recall:               0/0 = 0
+   fmeasure:             2 × (0 × 0) ÷ (0 + 0) = 0
+
+
+   I then computed average f-measure by averaging the 10 fmeasure scores:
+   0.49962490622 + 0.49962490622 + 0.49962490622 + 0.49962490622 + 0.79951980792 + 0 + 0.39975990396 + 0 + 0.49962490622 + 0 = 3.69740424298 / 10 = 0.36974042429
+
+
+
+
+
+I performed recall and precision with the 10 questions WITH including the answers in the matrix, and the
+results are below:
+
+1. input: Do you offer scholarships/fellowships
+   returned question :     Q121
+   all correct questions:  Q121
+   precsion:            1/3 = .333
+   recall:              1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
+
+2. input: What forms of financial aid is offered
+   returned question:      Q120
+   all correct questions:  Q120
+   precision:           1/3 = .333
+   recall:              1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
+
+3. input: Are there any application fees and/or waivers
+   returned question:      Q98
+   all correct questions:  Q98
+   precision:           1/3 = .333
+   recall:              1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622           
+
+4. input: What are the application deadlines (rolling admissions)
+   returned question:      Q68
+   all correct questions:  Q68
+   precision:           1/3 = .333
+   recall:              1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
+
+5. input: How long will it take to complete grad school/program
+   returned question:      Q20,Q24,Q25
+   all correct questions:  Q24,Q25
+   precision:           2/3 = .666
+   recall:              2/2 = 1
+   fmeasure:            2 × (.666 × 1) ÷ (.666 + 1) = 0.79951980792
+
+6. input: Is housing available for grad students
+   returned question:      Q41, Q33
+   all correct questions:  none
+   precision:           0/3 = 0
+   recall:              0/0   = 0   
+   fmeasure:            2 × (0 × 0) ÷ (0 + 0) = 0
+
+7. input: Are GRE test scores required
+   returned question:      Q108
+   all correct questions:  Q101, 109
+   precision:           1/3 = .333
+   recall:              1/2 = .5
+   fmeasure:            2 × (.333 × .5) ÷ (.333 × .5) = 0.39975990396
+
+8. input: Do students have to publish an article or do a master's project before graduation
+   returned question:      Q93, Q59
+   all correct questions:  0
+   precision:           0/3 = 0
+   recall:              0/0 = 0
+   fmeasure:            2 × (0 × 0) ÷ (0 + 0) = 0
+
+
+9. input: What is the minimum GPA required to be accepted into this grad school
+   returned question:      Q110
+   all correct questions:  Q110
+   precision:           1/3 = .333
+   recall:              1/1 = 1
+   fmeasure:            2 × (.333 × 1) ÷ (.333 + 1) = 0.49962490622
+
+10. input: How long will it take to complete grad school/program
+   returned question:      Q20,Q25,Q24
+   all correct questions:  0
+   precision:            0/3 = 0
+   recall:               0/0 = 0
+   fmeasure:             2 × (0 × 0) ÷ (0 + 0) = 0
+
+
+   I then computed average f-measure by averaging the 10 fmeasure scores:
+   0.49962490622 + 0.49962490622 + 0.49962490622 + 0.49962490622 + 0.79951980792 + 0 + 0.39975990396 + 0 + 0.49962490622 + 0 = 3.69740424298 / 10 = 0.36974042429
+
+
+   Conclusion, both methods have the same average f-measure score. Only notable difference between the two is that when including answers the cos similarity went down for one question which made it not appear as a definitive answer. 
+
+   
