@@ -96,7 +96,7 @@ $(document).ready(function(){
 		/******************************************
 		* 12. console log top three answers
 		******************************************/
-		logTopThree(searchString,topThree);
+		//logTopThree(searchString,topThree);
 
 		/******************************************
 		* 14. find answers in questionsAnswerArray for top three

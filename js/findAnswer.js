@@ -21,7 +21,7 @@ var findAnswer = function(topThree,questionAnswerArray){
 
 
 	$.each(topThree, function(i, indexOfQuestion){
-		//console.log("Index of question : " + indexOfQuestion);
+		console.log("Index of question : " + indexOfQuestion);
                          //answer text from qaData , 				cosinesimilarity,  indexofQuestion,  	  limit flag, 			distanceflag   
 		answerArray.push([qaData[indexOfQuestion[1][1]]['answer'], indexOfQuestion[0], indexOfQuestion[1][1], indexOfQuestion[3], indexOfQuestion[4]]);
 
@@ -57,20 +57,23 @@ var checkAnswerWeights = function(answerArray){
 	for(var i = 1; i < answerArray.length; i++){
 		//check if other answers are within 0.2 of top answer
 		//check if answers are the same
-		if(answerArray[i][4] == true && previousAnswerIndex.indexOf(answerArray[i][2]) === -1){
+		if(answerArray[i][4] === true && previousAnswerIndex.indexOf(answerArray[i][2]) === -1){
+
 			answerTextArray.push(answerArray[i][0]);
+			console.log("count" + i);
 		}
 
 		previousAnswerIndex .push(answerArray[i][2]);
+		console.log("ANSWER INDEX" + previousAnswerIndex);
 
 	}
 
-	//console.log("answer array : " + answerArray);
+	console.log("answer array : " + answerTextArray);
 	
 	$.each(answerTextArray,function(index,value){
  		answerText += value;
  	});
-
+	//console.log(answerText);
 	return answerText;
 	
 };

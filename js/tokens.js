@@ -79,6 +79,8 @@ var getFinalTokens = function(question){
   //remove punctuation and specila characters
   question = removePunctuation(question);
   
+  //
+  question = $.trim(question);
 
   //split into array of tokens
   currentTokens = getTokens(question);
