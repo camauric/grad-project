@@ -11,7 +11,7 @@ date:June 10, 2017
  */
 var checkSimilarity = function(value){
 
-	var LIMIT = 0.4999999;
+	var LIMIT = 0.5;
 	
 	return(value >= LIMIT);
 
@@ -32,7 +32,7 @@ var similarityDistance = function(topThree){
 	newTopThree.push([topThree[0][0],topThree[0][1],topThree[0][2],topThree[0][3],true]);
 
 	for(var i = 1; i < topThree.length; i++){
-		if((topAnswer - topThree[i][0]) <= 0.2){
+		if((topAnswer - topThree[i][0]) <= 0.2 || topAnswer == 1){
 			//console.log("distance flag = " + true);
 			newTopThree.push([topThree[i][0],topThree[i][1],topThree[i][2],topThree[i][3],true]);
 		}else{

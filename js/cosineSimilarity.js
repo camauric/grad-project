@@ -40,6 +40,9 @@ var cosineSimilarity = function(inputArray, currentQuestionArray){
  */
 var getValues = function(inputArray, currentQuestionArray){
 
+	//console.log("Input Array: " + inputArray);
+	//console.log("Current Question Array : " + currentQuestionArray);
+
 	var sumA = sumB = answer = numerator = denominator = 0;
 
 	for(var i = 0; i < inputArray.length; i++){
@@ -51,7 +54,8 @@ var getValues = function(inputArray, currentQuestionArray){
 	}
 
 	denominator = Math.sqrt(sumA) * Math.sqrt(sumB);
-	//console.log("NUMERATOR SUM : " + sum);
+	//console.log("NUMERATOR SUM : " + numerator);
+	//console.log("DENONMINATOR SUMS " + sumA +" " + sumB + " " + denominator);
 	//answer = [numerator, denominator];
 	//console.log("COSINE ANSWER : " + answer);
 	return [numerator, denominator];
