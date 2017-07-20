@@ -1,3 +1,9 @@
+/**
+ * find top three consine totals and creat an array with those values
+ * @param  {[array]}                  cosineTotalsArray       [array of cosine totals ]
+ * @param  {[two-dimensional array]}  questionsArray          [array of questions and corresponding answer index]
+ * @return {[array]}                  topThree                [array of top three questions]
+ */
 var getTopThreeQuestions = function(cosineTotalsArray, questionsArray){
     var cosinesOnly = [];
     //create array of only cosine totals

@@ -4,6 +4,12 @@
 * date:4/21/17
 */
 
+/**
+ * calculates the cosine similarity score of two vectors, user input an current matrix question vector
+ * @param  {[array]} 					inpputArray 				user input frequency vector
+ * @param  {[array]} 					currentQuestionArray 		current frequency vector of the matrix
+ * @return {[array]}  												simlarity score and similarity limitFlag values
+ */
 var cosineSimilarity = function(inputArray, currentQuestionArray){
 	var similarity = 0;
 	var limitFlag = false;
@@ -26,6 +32,12 @@ var cosineSimilarity = function(inputArray, currentQuestionArray){
 
 };
 
+/**
+ * calculates the numerator(dot product) and the denominator (magnitude) for the cosine similarity score
+ * @param  {[array]} 					inpputArray 				user input frequency vector
+ * @param  {[array]} 					currentQuestionArray 		current frequency vector of the matrix
+ * @return {[array]}  												dot product and maginitude values
+ */
 var getValues = function(inputArray, currentQuestionArray){
 
 	var sumA = sumB = answer = numerator = denominator = 0;
@@ -40,11 +52,16 @@ var getValues = function(inputArray, currentQuestionArray){
 
 	denominator = Math.sqrt(sumA) * Math.sqrt(sumB);
 	//console.log("NUMERATOR SUM : " + sum);
-	answer = [numerator, denominator];
+	//answer = [numerator, denominator];
 	//console.log("COSINE ANSWER : " + answer);
 	return [numerator, denominator];
 };
-
+/**
+ * calculates the cosine similarity score of two vectors, user input an current matrix question vector
+ * @param  {[array]} 					inpputArray 	user input frequency vector
+ * @param  {[multidimensional array]} 	matrix	 		multidimensional array of all questions frequency vectors
+ * @return {[array]}  									simlarity score and similarity limitFlag values for all questions in matrix
+ */
 var getCosineTotals = function(inputArray, matrix){
 
 	var cosineTotals = [];

@@ -2,6 +2,14 @@
 findAnswer.js
 author:Candace Maurice
 **/
+
+
+/**
+ * finds answer for topThree in questionAnswerArray
+ * @param  {[array]} 					topThree 	[array of top three answers]
+ * @param  {[array]} 					matrix 		[array of all questions with the index for the corresponding answer]
+ * @return {[string]}  					answerText  [answer string]
+ */
 var findAnswer = function(topThree,questionAnswerArray){
 
 	//topThree = [max(consineSimilarity value), question(string), questionIndex(indexofquestion), limitFlag, distanceflag]
@@ -23,7 +31,11 @@ var findAnswer = function(topThree,questionAnswerArray){
 	return answerText;
 };
 
-
+/**
+ * checks answers index to make sure the same answer isn't returned as well as the answerFlag and distance Flag and only returns answers that pass the checks
+ * @param  {[array]} 					answerArray 		[array of topThree answers]
+ * @return {[string]}  					answerText 			[answer string]
+ */
 var checkAnswerWeights = function(answerArray){
 
 	var previousAnswerIndex = [];

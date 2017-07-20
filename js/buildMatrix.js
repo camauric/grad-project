@@ -3,6 +3,11 @@ buildMatrix.js
 author:Candace Maurice
 date:March 21, 2017
 **/
+
+/**
+ * builds a matrix of frequency vectors for word match
+ * @return {[mulitdimensional array]}   matrix of frequency vectors
+ */
 var buildMatrix = function(){
 
   //get qs_and_as array
@@ -33,13 +38,13 @@ var buildMatrix = function(){
       
     // add answers to matrix 
     //uncomment this section to add answers lines 36 -42
-     answTokens = getFinalTokens(strip(qaData[i]['answer']));
+     /*answTokens = getFinalTokens(strip(qaData[i]['answer']));
 
          //push tokens onto array
        for(var k in answTokens){
 
          allTokens.push(answTokens[k]);
-     }
+     }*/
     
   }
   //unique values as tokens
@@ -61,10 +66,7 @@ var buildMatrix = function(){
    numberOfQuestions--;
   }
 
-  //TODO:
-  //fill matrix with with 1s for questions that match the word in the matrix[0] row
-  //need to compare question tokens to all tokens....tokens should be unique
-  //traverse data array to populate matix with 1s
+
    var questionCounter  = 0;
   for(var i = 0; i < qaData.length; i++){
     //loop through each question
@@ -92,7 +94,11 @@ return(matrix);
 
 }; 
 
-//strip html characters from text
+/**
+ *strips html characters from string
+ * @param {string} string with html characters
+ * @return {string} string without html characters 
+ **/
 var strip = function(html)
 {
    var tmp = document.createElement("DIV");

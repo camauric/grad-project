@@ -12,7 +12,7 @@ $(document).ready(function(){
 	var matrix = buildMatrix();
 	//build array of all questions with corresponding answer index
 	var questionAnswerArray = buildQuestionsArray();
-	//console.log(matrix);
+	//console.log(questionAnswerArray);
 
    /***********************************************
    * 2.get search string (user question)
