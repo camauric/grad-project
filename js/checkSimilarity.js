@@ -33,13 +33,13 @@ var similarityDistance = function(topThree){
 
 	for(var i = 1; i < topThree.length; i++){
 		if((topAnswer - topThree[i][0]) <= 0.2 || topAnswer == 1){
-			//console.log("distance flag = " + true);
+			
 			newTopThree.push([topThree[i][0],topThree[i][1],topThree[i][2],topThree[i][3],true]);
 		}else{
-			//console.log("distance flag = " + false);
+			
 			newTopThree.push([topThree[i][0],topThree[i][1],topThree[i][2],topThree[i][3],false]);
 		}
 	}
-	//console.log("New Top Three : " + newTopThree);
+	
 	return newTopThree;
 };
