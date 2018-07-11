@@ -6,7 +6,7 @@ date:June 10, 2017
 
 /**
  * test if input value is greater than or equal to LIMIT
- * @param  {[float]} 					value 		similarity value
+ * @param  {[float]} 			value 		similarity value
  * @return {[boolean]}  				boolean value of condition	
  */
 var checkSimilarity = function(value){
@@ -20,8 +20,8 @@ var checkSimilarity = function(value){
 
 /**
  * checks if similarity scores in topThree are within .20 of the top value
- * @param  {[array]} 					topThree 		array of top three values
- * @return {[array]}  					newTopThree		array of top three values wit value for distance Flag boolean
+ * @param  {[array]} 			topThree 	array of top three values
+ * @return {[array]}  			newTopThree	array of top three values wit value for distance Flag boolean
  */
 var similarityDistance = function(topThree){
 
