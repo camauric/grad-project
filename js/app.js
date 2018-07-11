@@ -14,9 +14,9 @@ $(document).ready(function(){
 	var questionAnswerArray = buildQuestionsArray();
 	//console.log(questionAnswerArray);
 
-   /***********************************************
-   * 2.get search string (user question)
-   ************************************************/
+   	/***********************************************
+  	 * 2.get search string (user question)
+   	************************************************/
 
 	//searchstring variable
 	var searchString = answer =  '';
