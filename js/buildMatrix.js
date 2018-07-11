@@ -52,10 +52,9 @@ var buildMatrix = function(){
   //  return allTokens.indexOf(elem) == pos;
   //});
   numTokens = Object.keys(allTokens).length;
-  //console.log("UNIQUE TOKENS ++++++>>>>>" + numTokens);
-  //console.log(uniqueTokens);
+
   var numberOfQuestions = getNumQuestions();
-  //console.log("Number of Tokens : " + numTokens);
+ 
   var matrix = [];
   //push array of tokens on to matrix
   matrix.push(allTokens);
@@ -88,7 +87,7 @@ var buildMatrix = function(){
     });
 
   }
-  //logMatrix(matrix);
+
 
 return(matrix);
 
