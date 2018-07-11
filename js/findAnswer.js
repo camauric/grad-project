@@ -6,9 +6,9 @@ author:Candace Maurice
 
 /**
  * finds answer for topThree in questionAnswerArray
- * @param  {[array]} 					topThree 	[array of top three answers]
- * @param  {[array]} 					matrix 		[array of all questions with the index for the corresponding answer]
- * @return {[string]}  					answerText  [answer string]
+ * @param  {[array]} 		topThree 	[array of top three answers]
+ * @param  {[array]} 		matrix 		[array of all questions with the index for the corresponding answer]
+ * @return {[string]}  		answerText  	[answer string]
  */
 var findAnswer = function(topThree,questionAnswerArray){
 
@@ -21,20 +21,19 @@ var findAnswer = function(topThree,questionAnswerArray){
 
 
 	$.each(topThree, function(i, indexOfQuestion){
-		console.log("Index of question : " + indexOfQuestion);
-                         //answer text from qaData , 				cosinesimilarity,  indexofQuestion,  	  limit flag, 			distanceflag   
+		
+                         		//answer text from qaData , 	cosinesimilarity,  	indexofQuestion,  	  limit flag, 		distanceflag   
 		answerArray.push([qaData[indexOfQuestion[1][1]]['answer'], indexOfQuestion[0], indexOfQuestion[1][1], indexOfQuestion[3], indexOfQuestion[4]]);
 
 	});
-	//console.log("answer Array : " + answerArray);
 	answerText = checkAnswerWeights(answerArray);
 	return answerText;
 };
 
 /**
  * checks answers index to make sure the same answer isn't returned as well as the answerFlag and distance Flag and only returns answers that pass the checks
- * @param  {[array]} 					answerArray 		[array of topThree answers]
- * @return {[string]}  					answerText 			[answer string]
+ * @param  {[array]} 		answerArray 		[array of topThree answers]
+ * @return {[string]}  		answerText 		[answer string]
  */
 var checkAnswerWeights = function(answerArray){
 
@@ -60,20 +59,20 @@ var checkAnswerWeights = function(answerArray){
 		if(answerArray[i][4] === true && previousAnswerIndex.indexOf(answerArray[i][2]) === -1){
 
 			answerTextArray.push(answerArray[i][0]);
-			console.log("count" + i);
+			//console.log("count" + i);
 		}
 
 		previousAnswerIndex .push(answerArray[i][2]);
-		console.log("ANSWER INDEX" + previousAnswerIndex);
+		//console.log("ANSWER INDEX" + previousAnswerIndex);
 
 	}
 
-	console.log("answer array : " + answerTextArray);
+	//console.log("answer array : " + answerTextArray);
 	
 	$.each(answerTextArray,function(index,value){
  		answerText += value;
  	});
-	//console.log(answerText);
+	
 	return answerText;
 	
 };
