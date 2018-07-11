@@ -77,5 +77,5 @@ var logTopThree = function(inputString, topThree){
     }
 
   });
-  console.log(output);
+  //console.log(output);
 };
